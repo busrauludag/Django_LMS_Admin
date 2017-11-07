@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Denizbank - Uzaktan Eğitim</title>
+  <meta name="description" content="Denizbank LMS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <!-- Google fonts - Roboto -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel=“apple-touch-icon” href=“favicon.png”>
+</head>
+<body>
+  <div class="page login-page">
+    <div class="container">
+      <div class="form-outer text-center d-flex align-items-center">
+        <div class="form-inner">
+          <div class="logo">
+            <img src="img/denizbank-logo.png" alt="" class="mx-auto">
+            <span>UZAKTAN EĞİTİM SİSTEMİ</span>
+          </div>
+          <form id="login-form" method="post" data-toggle="validator">
+            <div class="form-group">
+              <label for="login-username" class="label-custom">Kullanıcı Adı</label>
+              <input id="login-username" type="text" name="loginUsername" required="">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="login-password" class="label-custom">Şifre</label>
+              <input id="login-password" type="password" name="loginPassword" required="">
+              <div class="help-block with-errors"></div>
+            </div>
+            <button type="submit" class="btn btn-danbtn btn-primary">
+              Giriş
+            </button>
+          </form>
+          <button type="button" class="btn btn-danger btn-md rounded-circle help-btn" data-toggle="modal" data-target="#info">
+            <i class="fa fa-question"></i>
+          </button>
+          <p>
+            <a href="" class="pull-right">Şifremi Unuttum</a>
+          </p>
+          <!-- Language Select -->
+          <div class="dropdown pull-left">
+            <button class="btn btn-outline-primary btn-sm btn-language dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </button>
+            <ul class="dropdown-menu list-unstyled language-list" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item active" href="#">
+                  <img src="img/tr.png" alt="">Türkçe
+                  <i class="fa fa-check pull-right"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="img/en.png" alt="">İngilizce
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights text-center pt-3">
+      <p>Denizbank - Uzaktan Eğitim Sistemi</p>
+      <p><a href="#" class="external font-weight-bold">MIMLMS</a> altyapısıyla hizmet vermektedir.</p>
+    </div>
+  </div>
+
+  <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Nasıl Kullanabilirim?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled how-to-use">
+            <li>
+              Değerli öğrencilerimiz, sisteme giriş için kullanıcı adı kısmına okul numaranızın başına küçük "o" harfi koyarak, şifre için de OBİS şifrenizi kullanmalısınız. Eğer şifrenizi hatırlamıyorsanız lütfen öğrenci işlerinden yeni şifre edininiz.
+            </li>
+            <li>
+              Lütfen OBİS şifrenizde Türkçe karakter kullanmayın.
+            </li>
+            <li>
+              Uzaktan eğitim ile ilgili bütün sorunlarınız için ..... adresine mail atabilirsiniz.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript files-->
+  <script src="js/jquery-3-2-1.min.js"></script>
+  <script src="js/popper.min.js"> </script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+  <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+  <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/front.js"></script>
+  <script src="js/validator.js"></script>
+
+</body>
+</html>

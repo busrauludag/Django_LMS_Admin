@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Denizbak | Yönetim Paneli</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="stylesheet" href="vendor/data_table/css/dataTables.bootstrap4.min.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <div class="sidenav-header-inner text-center"><img src="img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5 text-uppercase">Anderson Hardy</h2><span class="text-uppercase">Denizbank</span>
+          </div>
+          <div class="sidenav-header-logo">
+            <a href="index.html" class="brand-small text-center">
+              <!-- <strong>B</strong><strong class="text-primary">D</strong> -->
+              <img src="img/denizbank_logo_2.png" alt="" class="mx-auto">
+            </a>
+          </div>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li class="active"><a href="index.html">
+              <i class="icon-home"></i><span>Anasayfa</span></a>
+            </li>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#users" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Kullanıcı</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="users" class="collapse list-unstyled">
+                  <li> <a href="#">Bölümler - Şubeler</a></li>
+                  <li> <a href="#">Fakülteler - Enstitüler - Sınıflar</a></li>
+                  <li> <a href="#">Kullanıcı Profilleri</a></li>
+                  <li> <a href="#">Kullanıcılar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#accounts" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Hesaplar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="accounts" class="collapse list-unstyled">
+                  <li> <a href="#">E-Posta Adresleri</a></li>
+                  <li> <a href="#">E-Posta Onayları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#courses" data-toggle="collapse" aria-expanded="false"><i class="icon-padnote"></i><span>Kurslar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="courses" class="collapse list-unstyled">
+                  <li> <a href="#">Dönemler</a></li>
+                  <li> <a href="#">Eğitim Yılları</a></li>
+                  <li> <a href="#">Kurs Grupları</a></li>
+                  <li> <a href="#">Kurs Katılımları</a></li>
+                  <li> <a href="#">Kurslar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#units" data-toggle="collapse" aria-expanded="false"><i class="icon-list"></i><span>Ünite</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="units" class="collapse list-unstyled">
+                  <li> <a href="#">Ders Değerlendirmeleri</a></li>
+                  <li> <a href="#">Ders Materyalleri</a></li>
+                  <li> <a href="#">Ders Not Paylaşmları</a></li>
+                  <li> <a href="#">Ders Notları</a></li>
+                  <li> <a href="#">Ders İlerlemeleri</a></li>
+                  <li> <a href="#">Dersler</a></li>
+                  <li> <a href="#">Devamlılık Çizelgeleri</a></li>
+                  <li> <a href="#">Kazanımlar</a></li>
+                  <li> <a href="#">Öğrenci Devamlılığı</a></li>
+                  <li> <a href="#">Üniteler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#homeworks" data-toggle="collapse" aria-expanded="false"><i class="icon-check"></i><span>Ödevler</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="homeworks" class="collapse list-unstyled">
+                  <li> <a href="#">Proje Ödevleri</a></li>
+                  <li> <a href="#">Teslim Edilen Ödevler</a></li>
+                  <li> <a href="#">Ödev Değerlendirmeleri</a></li>
+                  <li> <a href="#">Ödevler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#announcements" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Duyurular</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="announcements" class="collapse list-unstyled">
+                  <li> <a href="#">Duyurular</a></li>
+                  <li> <a href="#">Kurs Duyuruları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#mediapool" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Medya Havuzu</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="mediapool" class="collapse list-unstyled">
+                  <li> <a href="#">Etiketler</a></li>
+                  <li> <a href="#">Medyalar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#certificates" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Sertifikalar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="certificates" class="collapse list-unstyled">
+                  <li> <a href="#">Tasarımlar</a></li>
+                  <li> <a href="#">Sertifikalar</a></li>
+                  <li> <a href="#">Öğrenci Seritifkaları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#surveys" data-toggle="collapse" aria-expanded="false"><i class="icon-list-1"></i><span>Anketler</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="surveys" class="collapse list-unstyled">
+                  <li> <a href="#">Anketler</a></li>
+                  <li> <a href="#">Anket Soruları</a></li>
+                  <li> <a href="#">Sorular</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#discussion" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Tartışma</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="discussion" class="collapse list-unstyled">
+                  <li> <a href="#">Beğenmeler</a></li>
+                  <li> <a href="#">Cevaplar</a></li>
+                  <li> <a href="#">Destekler</a></li>
+                  <li> <a href="#">Mesajlar</a></li>
+                  <li> <a href="#">Mesjlaşma Konuları</a></li>
+                  <li> <a href="#">Sorular</a></li>
+                  <li> <a href="#">Tartışmalar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#faq" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>S.S.S</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="faq" class="collapse list-unstyled">
+                  <li> <a href="#">S.S.S</a></li>
+                  <li> <a href="#">Kategoriler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Bildirimler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-interface-windows"></i><span>Siteler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Requests</span></a>
+            </li>
+            <li>
+              <a href="form-elements.html"><i class="icon-form"></i><span>Forms</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header">
+                <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block">
+                    <img src="img/denizbank.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu search-menu">
+                    <li>
+                      <form action="">
+                        <div class="input-group">
+                          <input type="text" class="form-control form-control-sm" placeholder="Ara...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary btn-sm" type="button">Ara</button>
+                          </span>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-bell"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu notification-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> Tümünü Göster </strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-envelope"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu message-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> <i class="fa fa-envelope"></i>Read all messages</strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2"> 
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu profile-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Anderson Hardy</h3><small>Admin</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-user"></i> Profile</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-cog"></i> Settings</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-sign-out"></i> Çıkış</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="breadcrumb-holder">
+        <div class="container-fluid">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Forms</li>
+          </ul>
+        </div>
+      </div>
+      <section class="forms">
+        <div class="container-fluid">
+          <header> 
+            <h1 class="h3 display">Data Table</h1>
+          </header>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2 class="h5 display">Data Table</h2>
+                </div>
+                <div class="card-body">
+                 
+                  <table id="example" class="table table-bordered table-hover table-responsive-sm display" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td>2011/04/25</td>
+                          <td>$320,800</td>
+                      </tr>
+                      <tr>
+                          <td>Garrett Winters</td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>63</td>
+                          <td>2011/07/25</td>
+                          <td>$170,750</td>
+                      </tr>
+                      <tr>
+                          <td>Ashton Cox</td>
+                          <td>Junior Technical Author</td>
+                          <td>San Francisco</td>
+                          <td>66</td>
+                          <td>2009/01/12</td>
+                          <td>$86,000</td>
+                      </tr>
+                      <tr>
+                          <td>Cedric Kelly</td>
+                          <td>Senior Javascript Developer</td>
+                          <td>Edinburgh</td>
+                          <td>22</td>
+                          <td>2012/03/29</td>
+                          <td>$433,060</td>
+                      </tr>
+                      <tr>
+                          <td>Airi Satou</td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>33</td>
+                          <td>2008/11/28</td>
+                          <td>$162,700</td>
+                      </tr>
+                      <tr>
+                          <td>Brielle Williamson</td>
+                          <td>Integration Specialist</td>
+                          <td>New York</td>
+                          <td>61</td>
+                          <td>2012/12/02</td>
+                          <td>$372,000</td>
+                      </tr>
+                      <tr>
+                          <td>Herrod Chandler</td>
+                          <td>Sales Assistant</td>
+                          <td>San Francisco</td>
+                          <td>59</td>
+                          <td>2012/08/06</td>
+                          <td>$137,500</td>
+                      </tr>
+                      <tr>
+                          <td>Rhona Davidson</td>
+                          <td>Integration Specialist</td>
+                          <td>Tokyo</td>
+                          <td>55</td>
+                          <td>2010/10/14</td>
+                          <td>$327,900</td>
+                      </tr>
+                      <tr>
+                          <td>Colleen Hurst</td>
+                          <td>Javascript Developer</td>
+                          <td>San Francisco</td>
+                          <td>39</td>
+                          <td>2009/09/15</td>
+                          <td>$205,500</td>
+                      </tr>
+                      <tr>
+                          <td>Sonya Frost</td>
+                          <td>Software Engineer</td>
+                          <td>Edinburgh</td>
+                          <td>23</td>
+                          <td>2008/12/13</td>
+                          <td>$103,600</td>
+                      </tr>
+                      <tr>
+                          <td>Jena Gaines</td>
+                          <td>Office Manager</td>
+                          <td>London</td>
+                          <td>30</td>
+                          <td>2008/12/19</td>
+                          <td>$90,560</td>
+                      </tr>
+                      <tr>
+                          <td>Quinn Flynn</td>
+                          <td>Support Lead</td>
+                          <td>Edinburgh</td>
+                          <td>22</td>
+                          <td>2013/03/03</td>
+                          <td>$342,000</td>
+                      </tr>
+                      <tr>
+                          <td>Charde Marshall</td>
+                          <td>Regional Director</td>
+                          <td>San Francisco</td>
+                          <td>36</td>
+                          <td>2008/10/16</td>
+                          <td>$470,600</td>
+                      </tr>
+                      <tr>
+                          <td>Haley Kennedy</td>
+                          <td>Senior Marketing Designer</td>
+                          <td>London</td>
+                          <td>43</td>
+                          <td>2012/12/18</td>
+                          <td>$313,500</td>
+                      </tr>
+                      <tr>
+                          <td>Tatyana Fitzpatrick</td>
+                          <td>Regional Director</td>
+                          <td>London</td>
+                          <td>19</td>
+                          <td>2010/03/17</td>
+                          <td>$385,750</td>
+                      </tr>
+                      <tr>
+                          <td>Michael Silva</td>
+                          <td>Marketing Designer</td>
+                          <td>London</td>
+                          <td>66</td>
+                          <td>2012/11/27</td>
+                          <td>$198,500</td>
+                      </tr>
+                      <tr>
+                          <td>Paul Byrd</td>
+                          <td>Chief Financial Officer (CFO)</td>
+                          <td>New York</td>
+                          <td>64</td>
+                          <td>2010/06/09</td>
+                          <td>$725,000</td>
+                      </tr>
+                      <tr>
+                          <td>Gloria Little</td>
+                          <td>Systems Administrator</td>
+                          <td>New York</td>
+                          <td>59</td>
+                          <td>2009/04/10</td>
+                          <td>$237,500</td>
+                      </tr>
+                      <tr>
+                          <td>Bradley Greer</td>
+                          <td>Software Engineer</td>
+                          <td>London</td>
+                          <td>41</td>
+                          <td>2012/10/13</td>
+                          <td>$132,000</td>
+                      </tr>
+                      <tr>
+                          <td>Dai Rios</td>
+                          <td>Personnel Lead</td>
+                          <td>Edinburgh</td>
+                          <td>35</td>
+                          <td>2012/09/26</td>
+                          <td>$217,500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Denizbank &copy; 2017</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <a href="https://www.mimcrea.com" class="external font-weight-bold">MIMCREA</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="js/jquery-3-2-1.min.js"></script>
+    <script src="js/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/front.js"></script>
+
+    <script src="vendor/data_table//js/jquery.dataTables.js"></script>
+
+    <script>
+      // $(document).ready(function() {
+      //   $('#example').DataTable();
+      // });
+
+
+      $(document).ready(function() {
+        // $('#example').DataTable({
+        //   "language": {
+        //     "sDecimal":        ",",
+        //     "sEmptyTable":     "Tabloda herhangi bir veri mevcut değil",
+        //     "sInfo":           "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+        //     "sInfoEmpty":      "Kayıt yok",
+        //     "sInfoFiltered":   "(_MAX_ kayıt içerisinden bulunan)",
+        //     "sInfoPostFix":    "",
+        //     "sInfoThousands":  ".",
+        //     "sLengthMenu":     "Sayfada _MENU_ kayıt göster",
+        //     "sLoadingRecords": "Yükleniyor...",
+        //     "sProcessing":     "İşleniyor...",
+        //     "sSearch":         "Ara:",
+        //     "sZeroRecords":    "Eşleşen kayıt bulunamadı",
+        //     "oPaginate": {
+        //         "sFirst":    "İlk",
+        //         "sLast":     "Son"/*,
+        //         "sNext":     "Sonraki",
+        //         "sPrevious": "Önceki"*/
+        //     },
+        //     "oAria": {
+        //         "sSortAscending":  ": artan sütun sıralamasını aktifleştir",
+        //         "sSortDescending": ": azalan sütun sıralamasını aktifleştir"
+        //     }
+        //   }
+        // });
+
+        $('#example').DataTable( {
+          "language": {
+              "url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+          }
+        } );
+      } );
+    </script>
+  </body>
+</html>

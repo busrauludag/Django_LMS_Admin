@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Denizbak | Yönetim Paneli</title>
+    <meta name="description" content="Denizbank LMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel=“apple-touch-icon” href=“favicon.png”>
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <div class="sidenav-header-inner text-center"><img src="img/denizbank_logo_2.png" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5 text-uppercase">Anderson Hardy</h2><span class="text-uppercase">Denizbank</span>
+          </div>
+          <div class="sidenav-header-logo">
+            <a href="index.html" class="brand-small text-center">
+              <!-- <strong>B</strong><strong class="text-primary">D</strong> -->
+              <img src="img/denizbank_logo_2.png" alt="" class="mx-auto">
+            </a>
+          </div>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li class="active"><a href="index.html">
+              <i class="icon-home"></i><span>Anasayfa</span></a>
+            </li>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#users" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Kullanıcı</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="users" class="collapse list-unstyled">
+                  <li> <a href="#">Bölümler - Şubeler</a></li>
+                  <li> <a href="#">Fakülteler - Enstitüler - Sınıflar</a></li>
+                  <li> <a href="#">Kullanıcı Profilleri</a></li>
+                  <li> <a href="#">Kullanıcılar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#accounts" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Hesaplar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="accounts" class="collapse list-unstyled">
+                  <li> <a href="#">E-Posta Adresleri</a></li>
+                  <li> <a href="#">E-Posta Onayları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Bildirimler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-interface-windows"></i><span>Siteler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Requests</span></a>
+            </li>
+            <li>
+              <a href="form-elements.html"><i class="icon-form"></i><span>Forms</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header">
+                <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-menu"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block">
+                    <img src="img/denizbank.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu search-menu">
+                    <li>
+                      <form action="">
+                        <div class="input-group">
+                          <input type="text" class="form-control form-control-sm" placeholder="Ara...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary btn-sm" type="button">Ara</button>
+                          </span>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-bell"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu notification-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> Tümünü Göster </strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-envelope"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu message-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/denizbank_logo_2.png" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/denizbank_logo_2.png" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> <i class="fa fa-envelope"></i>Read all messages</strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2"> 
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu profile-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/denizbank_logo_2.png" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Anderson Hardy</h3><small>Admin</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-user"></i> Profile</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-cog"></i> Settings</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="login.html" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-sign-out"></i> Çıkış</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Counts Section -->
+      <section class="dashboard-counts section-padding">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex bg-user">
+                <div class="icon"><i class="icon-user"></i></div>
+                <div class="name"><strong class="text-uppercase">Kullanıcı</strong>
+                  <div class="count-number">25</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="icon-notebook"></i></div>
+                <div class="name"><strong class="text-uppercase">Kurs</strong>
+                  <div class="count-number">400</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="icon-book-open"></i></div>
+                <div class="name"><strong class="text-uppercase">Ödev</strong>
+                  <div class="count-number">342</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="icon-check"></i></div>
+                <div class="name"><strong class="text-uppercase">Anket</strong>
+                  <div class="count-number">123</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="icon-pencil"></i></div>
+                <div class="name"><strong class="text-uppercase">Materyal</strong>
+                  <div class="count-number">92</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="icon-pie-chart"></i></div>
+                <div class="name"><strong class="text-uppercase">Rapor</strong>
+                  <div class="count-number">70</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <hr>
+
+
+      <!-- Updates Section -->
+      <section class="updates section-padding">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-7">
+              <!-- Recent Updates            -->
+              <div id="new-updates" class="wrapper recent-updated">
+                <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
+                  <h2 class="h5 display">
+                    <a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box">
+                      Son Eylemler
+                    </a>
+                  </h2>
+                  <a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box">
+                    <i class="fa fa-angle-down"></i>
+                  </a>
+                </div>
+                <div id="updates-box" role="tabpanel" class="collapse show">
+                  <ul class="news list-unstyled">
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon"><i class="icon-rss-feed"></i></div>
+                        <div class="title">
+                          <h3 class="h5">Lorem ipsum dolor sit amet.</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Recent Activities -->
+            <div class="col-lg-5">
+              <div id="recent-activities-wrapper" class="wrapper recent-activities">
+                <div id="activites-header" class="card-header d-flex justify-content-between align-items-center">
+                  <h2 class="h5 display">
+                    <a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box">
+                      Eylemlerim
+                    </a>
+                  </h2>
+                  <a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box">
+                    <i class="fa fa-angle-down"></i>
+                  </a>
+                </div>
+                <div id="activities-box" role="tabpanel" class="collapse show">
+                  <ul class="activities list-unstyled">
+                    <!-- Item-->
+                    <li>
+                      <div class="row">
+                        <div class="col-3 date-holder text-right">
+                          <div class="icon"><i class="icon-clock"></i></div>
+                          <div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
+                        </div>
+                        <div class="col-9 content"><strong>Meeting</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li>
+                      <div class="row">
+                        <div class="col-3 date-holder text-right">
+                          <div class="icon"><i class="icon-clock"></i></div>
+                          <div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
+                        </div>
+                        <div class="col-9 content"><strong>Meeting</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li>
+                      <div class="row">
+                        <div class="col-3 date-holder text-right">
+                          <div class="icon"><i class="icon-clock"></i></div>
+                          <div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
+                        </div>
+                        <div class="col-9 content"><strong>Meeting</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li>
+                      <div class="row">
+                        <div class="col-3 date-holder text-right">
+                          <div class="icon"><i class="icon-clock"></i></div>
+                          <div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
+                        </div>
+                        <div class="col-9 content"><strong>Meeting</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Denizbank &copy; 2017</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <a href="https://www.mimcrea.com" class="external font-weight-bold">MIMCREA</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="js/jquery-3-2-1.min.js"></script>
+    <script src="js/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="js/front.js"></script>
+  </body>
+</html>
