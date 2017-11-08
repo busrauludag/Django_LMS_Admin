@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/toaster.min.css">
+
     <!-- Simple Line Icons -->
     <link rel="stylesheet" href="css/simple-line-icons.css">
     <!-- Google fonts - Roboto -->
@@ -250,6 +252,13 @@
       <!-- Counts Section -->
       <section class="dashboard-counts section-padding">
         <div class="container-fluid">
+
+
+          <!-- toaster example -->
+            <button class="btn btn-sm btn-info" id="info">Show Toaster</button>          
+          <!-- toaster example -->
+
+          <br><br>
           <div class="row">
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex bg-user">
@@ -482,6 +491,19 @@
     <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
     <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+
+    <script src="js/toaster.min.js"></script>
+
     <script src="js/front.js"></script>
+
+    <script>
+      $(function () {
+        $('#info').click(function () {
+          // title is optional
+            toastr.info("Info Message", "Title");
+        });
+    });
+    </script>
+
   </body>
 </html>
