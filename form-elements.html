@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>Denizbak | Yönetim Paneli</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -28,6 +28,207 @@
     <link rel="stylesheet" href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-fileupload/css/fileinput.min.css">
+    <link rel="stylesheet" href="vendor/dropzone/css/dropzone.min.css">
+    <!-- Favicon-->
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <!-- <style>
+      form.forms div[class*="col-"] {
+        margin-bottom: 30px;
+      }
+
+      section header .display {
+        padding: 30px 0;
+      }
+
+     /* form.forms .form {
+        background: #fff;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        height: 100%;
+      }*/
+
+      /*form.forms .form .form-header {
+        padding: 10px 20px;
+        background: #fafafa;
+      }
+
+      form.forms .form .form-body {
+        padding: 20px;
+      }*/
+
+      form.forms .line {
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #eee;
+        margin: 20px 0 30px;
+      }
+
+      form.forms .form-group {
+        margin-bottom: 0;
+      }
+
+      form.forms .btn-primary, form.forms .btn-secondary {
+        font-weight: 300;
+        font-size: 0.75em;
+        border-radius: 0;
+      }
+
+      /*
+      * ==========================================================
+      *     FORMS GENERAL
+      * ==========================================================
+      */
+      form.forms p {
+        font-size: 0.8em;
+        color: #999;
+      }
+
+      form.forms input.form-control {
+        border-radius: 0;
+      }
+
+      form.forms input.form-control::-moz-placeholder,
+      form.forms textarea.form-control::-moz-placeholder {
+        font-size: 0.75em;
+        font-weight: 300;
+        color: #aaa;
+        font-family: "Roboto", sans-serif;
+      }
+
+      form.forms input.form-control::-webkit-input-placeholder,
+      form.forms textarea.form-control::-webkit-input-placeholder {
+        font-size: 0.75em;
+        font-weight: 300;
+        color: #aaa;
+        font-family: "Roboto", sans-serif;
+      }
+
+      form.forms input.form-control:-ms-input-placeholder,
+      form.forms textarea.form-control:-ms-input-placeholder {
+        font-size: 0.75em;
+        font-weight: 300;
+        color: #aaa;
+        font-family: "Roboto", sans-serif;
+      }
+
+      form.forms .select {
+        margin-bottom: 20px;
+      }
+
+      form.forms .select:last-of-type {
+        margin-bottom: 0;
+      }
+
+      form.forms select {
+        border-radius: 0;
+        border-color: #ddd;
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+      }
+
+      form.forms select option {
+        color: #999;
+        font-weight: 300;
+      }
+
+      form.forms .form-group {
+        margin-bottom: 10px;
+      }
+
+      form.forms .form-group div[class*='col-'] {
+        margin-bottom: 10px;
+      }
+
+      form.forms label {
+        font-size: 0.8em;
+      }
+
+      form.forms small, form.forms span {
+        font-size: 0.65em;
+        color: #999;
+      }
+
+      form.forms label span, form.forms label small {
+        font-size: 0.8em;
+      }
+
+      form.forms .input-group-addon {
+        border-radius: 0;
+        background: #f5f5f5;
+      }
+
+      form.forms span.input-group-addon {
+        font-size: 0.8em;
+        font-weight: 300;
+        background: none;
+      }
+
+      form.forms .input-group-btn {
+        font-size: 1em;
+      }
+
+      form.forms .input-group-btn button.dropdown-toggle {
+        background: #eee;
+        font-size: 0.8em;
+        color: #777;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        cursor: pointer;
+      }
+
+      form.forms .input-group-btn .dropdown-menu {
+        padding: 10px;
+        font-size: 0.8em;
+        color: #777;
+      }
+
+      form.forms .input-group-btn .dropdown-menu a {
+        text-decoration: none;
+        color: inherit;
+        padding: 4px 0;
+      }
+
+      /* FORMS MEDIAQUERIES -------------------------- */
+      @media (min-width: 768px) {
+        section h2.display {
+          font-size: 1rem;
+        }
+        form.forms input.form-control,
+        form.forms textarea.form-control  {
+          border-radius: 0;
+        }
+        form.forms input.form-control::-moz-placeholder {
+          font-size: 0.85em;
+        }
+        form.forms input.form-control::-webkit-input-placeholder {
+          font-size: 0.85em;
+        }
+        form.forms input.form-control:-ms-input-placeholder {
+          font-size: 0.85em;
+        }
+        form.forms p {
+          font-size: 0.9em;
+        }
+        form.forms label {
+          font-size: 0.9em;
+        }
+        form.forms small, form.forms span {
+          font-size: 0.8em;
+          color: #999;
+        }
+        form.forms label span, form.forms label small {
+          font-size: 0.9em;
+        }
+        form.forms .btn-primary, form.forms .btn-secondary {
+          font-size: 0.95em;
+        }
+      }
+    </style> -->
+
   </head>
   <body>
     <!-- Side Navbar -->
@@ -138,7 +339,7 @@
           </ul>
         </div>
       </div>
-      <section class="forms">
+      <section>
         <div class="container-fluid">
           <header> 
             <h1 class="h3 display">Forms</h1>
@@ -150,7 +351,7 @@
                   <h2 class="h5 display">All form elements</h2>
                 </div>
                 <div class="card-body">
-                  <form class="form-horizontal">
+                  <form class="form-horizontal forms">
                     <div class="form-group row">
                       <label class="col-sm-2 form-control-label">Normal</label>
                       <div class="col-sm-10">
@@ -159,7 +360,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Textarea</div>
+                      <label class="col-sm-2 form-control-label">Textarea</label>
                       <div class="col-sm-10">
                         <textarea rows="4" class="form-control" placeholder="Textarea" style="resize: none;"></textarea>
                       </div>
@@ -408,64 +609,14 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Inline Form</label>
-                      <div class="col-sm-10">
-                        <form class="form-inline">
-                          <div class="form-group">
-                            <label for="inlineFormInput" class="sr-only">Name</label>
-                            <input id="inlineFormInput" type="text" placeholder="Jane Doe" class="mx-sm-3 form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="inlineFormInputGroup" class="sr-only">Username</label>
-                            <input id="inlineFormInputGroup" type="text" placeholder="Username" class="mx-sm-3 form-control form-control">
-                          </div>
-                          <div class="form-group">
-                            <input type="submit" value="Submit" class="mx-sm-3 btn btn-primary">
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Modal Form</div>
+                      <label class="col-sm-2 form-control-label">Modal Form</label>
                       <div class="col-sm-10">
                         <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Form in simple modal </button>
-                        <!-- Modal-->
-                        <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                          <div role="document" class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 id="exampleModalLabel" class="modal-title">Signin Modal</h5>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                <form>
-                                  <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Email Address" class="form-control">
-                                  </div>
-                                  <div class="form-group">       
-                                    <label>Password</label>
-                                    <input type="password" placeholder="Password" class="form-control">
-                                  </div>
-                                  <div class="form-group">       
-                                    <input type="submit" value="Signin" class="btn btn-primary">
-                                  </div>
-                                </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Datepicker</div>
+                      <label class="col-sm-2 form-control-label">Datepicker</label>
                       <div class="col-sm-10">
                         <div class="input-group input-append date datepicker" id="datePicker">
                           <span class="input-group-addon add-on"><span class="fa fa-calendar"></span></span>
@@ -475,7 +626,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">DateTime-picker</div>
+                      <label class="col-sm-2 form-control-label">DateTime-picker</label>
                       <div class="col-sm-10">
                         <div class="input-group date datetime-picker">
                           <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
@@ -485,7 +636,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Switcher</div>
+                      <label class="col-sm-2 form-control-label">Switcher</label>
                       <div class="col-sm-10">
                         <div class="btn_switch">
                           <input type="checkbox" name="switch" id="switch" checked>
@@ -495,7 +646,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Dropdown Search</div>
+                      <label class="col-sm-2 form-control-label">Dropdown Search</label>
                       <div class="col-sm-10">
                         <select class="select2 form-control">
                           <option value='1'>option1</option>
@@ -513,7 +664,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Select With Multiple</div>
+                      <label class="col-sm-2 form-control-label">Select With Multiple</label>
                       <div class="col-sm-10">
                         <select class="select2 form-control" multiple>
                           <option value='1'>option1</option>
@@ -531,7 +682,7 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">Multiple Select</div>
+                      <label class="col-sm-2 form-control-label">Multiple Select</label>
                       <div class="col-sm-10">
                         <div class="row">
                           <div class="col-sm-5">
@@ -587,10 +738,21 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <div class="col-sm-2 form-control-label">File Upload</div>
+                      <label class="col-sm-2 form-control-label">File Upload</label>
                       <div class="col-sm-10">
                         <div class="file-loading">
                           <input id="input-ficons-1" name="input-ficons-1[]" multiple type="file">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Dropzone</label>
+                      <div class="col-sm-10">
+                        <div action="/file-upload" class="dropzone" >
+                            <div class="fallback">
+                              <input name="file" type="file" multiple />
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -600,6 +762,28 @@
                         <button type="submit" class="btn btn-secondary">Cancel</button>
                         <button type="submit" class="btn btn-primary">Save changes</button>
                       </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 my-5">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2 class="h5 display">Inline Form</h2>
+                </div>
+                <div class="card-body">
+                  <form class="form-inline forms">
+                    <div class="form-group">
+                      <label for="inlineFormInput" class="sr-only">Name</label>
+                      <input id="inlineFormInput" type="text" placeholder="Jane Doe" class="mx-sm-3 form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="inlineFormInputGroup" class="sr-only">Username</label>
+                      <input id="inlineFormInputGroup" type="text" placeholder="Username" class="mx-sm-3 form-control form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" value="Submit" class="mx-sm-3 btn btn-primary">
                     </div>
                   </form>
                 </div>
@@ -622,6 +806,38 @@
         </div>
       </footer>
     </div>
+
+    <!-- Modal-->
+    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="exampleModalLabel" class="modal-title">Signin Modal</h5>
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <form class="forms">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Email Address" class="form-control">
+              </div>
+              <div class="form-group">       
+                <label>Password</label>
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+              <div class="form-group">       
+                <input type="submit" value="Signin" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Javascript files-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
@@ -638,6 +854,7 @@
     <script src="vendor/select2/js/select2.min.js"></script>
     <script src="vendor/multiselect/multiselect.min.js"></script>
     <script src="vendor/bootstrap-fileupload/js/fileinput.min.js"></script>
+    <script src="vendor/dropzone/js/dropzone.min.js"></script>
 
 
     <script>
@@ -673,6 +890,7 @@
           }
         });
       });
+      Dropzone.prototype.defaultOptions.dictDefaultMessage = "Dosyaları yüklemek için buraya bırakın";
     </script>
   </body>
 </html>

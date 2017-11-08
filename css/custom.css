@@ -208,12 +208,12 @@ section.dashboard-counts .count-title{
 	color: #495057;
 	font-size: 1rem;
 	border: 1px solid #ced4da!important;
-	border-radius: 0;
+	border-radius: 0 !important;
 	min-height: 38px;
 	font-weight: 300;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-	line-height: 38px;
+	line-height: 38px !important;
 	font-size: 1rem;
 }
 
@@ -235,6 +235,10 @@ section.forms .btn span {
 	font-weight: 300;
 }
 
+.dropzone {
+  border: 1px solid #ced4da !important;
+  border-radius: 0;
+}
 /*fileUpload*/
 
 /* datatable*/
