@@ -296,4 +296,10 @@ section.forms.tables div[class*="col-"] {
 .card-profile .card-links {
 	margin-bottom: 25px;
 }
+/* profile card */
+
+.container-fluid{
+	padding-left:1%;
+	padding-right:1%;
+} 
 
