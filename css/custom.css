@@ -303,3 +303,14 @@ section.forms.tables div[class*="col-"] {
 	padding-right:1%;
 } 
 
+/* form wizard */
+.wizard-nav a.nav-link{
+	color:#fff;
+	border-radius: 0;
+	background-color: #C02D3F;
+}
+.wizard-nav a.nav-link.active{
+	color:#fff;
+	border-radius: 0;
+	background-color: #9e1929;
+}
