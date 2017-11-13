@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Denizbank | Derslerim</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <div class="sidenav-header-inner text-center"><img src="img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5 text-uppercase">Anderson Hardy</h2><span class="text-uppercase">Denizbank</span>
+          </div>
+          <div class="sidenav-header-logo">
+            <a href="index.html" class="brand-small text-center">
+              <!-- <strong>B</strong><strong class="text-primary">D</strong> -->
+              <img src="img/denizbank_logo_2.png" alt="" class="mx-auto">
+            </a>
+          </div>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li class="active"><a href="index.html">
+              <i class="icon-home"></i><span>Anasayfa</span></a>
+            </li>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#users" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Kullanıcı</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="users" class="collapse list-unstyled">
+                  <li> <a href="#">Bölümler - Şubeler</a></li>
+                  <li> <a href="#">Fakülteler - Enstitüler - Sınıflar</a></li>
+                  <li> <a href="#">Kullanıcı Profilleri</a></li>
+                  <li> <a href="#">Kullanıcılar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#accounts" data-toggle="collapse" aria-expanded="false"><i class="icon-user"></i><span>Hesaplar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="accounts" class="collapse list-unstyled">
+                  <li> <a href="#">E-Posta Adresleri</a></li>
+                  <li> <a href="#">E-Posta Onayları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#courses" data-toggle="collapse" aria-expanded="false"><i class="icon-padnote"></i><span>Kurslar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="courses" class="collapse list-unstyled">
+                  <li> <a href="#">Dönemler</a></li>
+                  <li> <a href="#">Eğitim Yılları</a></li>
+                  <li> <a href="#">Kurs Grupları</a></li>
+                  <li> <a href="#">Kurs Katılımları</a></li>
+                  <li> <a href="#">Kurslar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#units" data-toggle="collapse" aria-expanded="false"><i class="icon-list"></i><span>Ünite</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="units" class="collapse list-unstyled">
+                  <li> <a href="#">Ders Değerlendirmeleri</a></li>
+                  <li> <a href="#">Ders Materyalleri</a></li>
+                  <li> <a href="#">Ders Not Paylaşmları</a></li>
+                  <li> <a href="#">Ders Notları</a></li>
+                  <li> <a href="#">Ders İlerlemeleri</a></li>
+                  <li> <a href="#">Dersler</a></li>
+                  <li> <a href="#">Devamlılık Çizelgeleri</a></li>
+                  <li> <a href="#">Kazanımlar</a></li>
+                  <li> <a href="#">Öğrenci Devamlılığı</a></li>
+                  <li> <a href="#">Üniteler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#homeworks" data-toggle="collapse" aria-expanded="false"><i class="icon-check"></i><span>Ödevler</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="homeworks" class="collapse list-unstyled">
+                  <li> <a href="#">Proje Ödevleri</a></li>
+                  <li> <a href="#">Teslim Edilen Ödevler</a></li>
+                  <li> <a href="#">Ödev Değerlendirmeleri</a></li>
+                  <li> <a href="#">Ödevler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#announcements" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Duyurular</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="announcements" class="collapse list-unstyled">
+                  <li> <a href="#">Duyurular</a></li>
+                  <li> <a href="#">Kurs Duyuruları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#mediapool" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Medya Havuzu</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="mediapool" class="collapse list-unstyled">
+                  <li> <a href="#">Etiketler</a></li>
+                  <li> <a href="#">Medyalar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#certificates" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Sertifikalar</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="certificates" class="collapse list-unstyled">
+                  <li> <a href="#">Tasarımlar</a></li>
+                  <li> <a href="#">Sertifikalar</a></li>
+                  <li> <a href="#">Öğrenci Seritifkaları</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#surveys" data-toggle="collapse" aria-expanded="false"><i class="icon-list-1"></i><span>Anketler</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="surveys" class="collapse list-unstyled">
+                  <li> <a href="#">Anketler</a></li>
+                  <li> <a href="#">Anket Soruları</a></li>
+                  <li> <a href="#">Sorular</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#discussion" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Tartışma</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="discussion" class="collapse list-unstyled">
+                  <li> <a href="#">Beğenmeler</a></li>
+                  <li> <a href="#">Cevaplar</a></li>
+                  <li> <a href="#">Destekler</a></li>
+                  <li> <a href="#">Mesajlar</a></li>
+                  <li> <a href="#">Mesjlaşma Konuları</a></li>
+                  <li> <a href="#">Sorular</a></li>
+                  <li> <a href="#">Tartışmalar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+              <li> 
+                <a href="#faq" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>S.S.S</span>
+                  <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                </a>
+                <ul id="faq" class="collapse list-unstyled">
+                  <li> <a href="#">S.S.S</a></li>
+                  <li> <a href="#">Kategoriler</a></li>
+                </ul>
+              </li>
+            </ul>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Bildirimler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-interface-windows"></i><span>Siteler</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-form"></i><span>Requests</span></a>
+            </li>
+            <li>
+              <a href="form-elements.html"><i class="icon-form"></i><span>Forms</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header">
+                <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block">
+                    <img src="img/denizbank.png" alt="">
+                  </div>
+                </a>
+              </div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu search-menu">
+                    <li>
+                      <form action="">
+                        <div class="input-group">
+                          <input type="text" class="form-control form-control-sm" placeholder="Ara...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary btn-sm" type="button">Ara</button>
+                          </span>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-bell"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu notification-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> Tümünü Göster </strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2">
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-envelope"></i><span class="bg-info new-info rounded-circle"></span>
+                  </a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu message-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> 
+                        <strong> <i class="fa fa-envelope"></i>Read all messages</strong>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mr-2"> 
+                  <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                    <i class="fa fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu profile-menu">
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Anderson Hardy</h3><small>Admin</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-user"></i> Profile</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-cog"></i> Settings</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-sign-out"></i> Çıkış</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="breadcrumb-holder">
+        <div class="container-fluid">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+            <li class="breadcrumb-item active">Dersler</li>
+          </ul>
+        </div>
+      </div>
+      <section class="forms">
+        <div class="container-fluid">
+          <header> 
+            <h1 class="h2 display pb-1">
+              <button class="btn btn-info btn-sm pull-right"><i class="fa fa-plus"></i> Ders Oluştur</button>
+              Dersler
+            </h1>
+            <div class="title-divider"></div>
+          </header>
+          
+          <form class="forms">
+            <div class="row mb-4">
+              <div class="col-sm-6 col-12 mb-3">
+                <div class="form-group">
+                  <select class="select2 form-control mx-sm-3">
+                    <option value='1'>option1</option>
+                    <option value='2'>option2</option>
+                    <option value='3'>option3</option>
+                    <option value='4'>option4</option>
+                    <option value='5'>option5</option>
+                    <option value='6'>option6</option>
+                    <option value='7'>option7</option>
+                    <option value='8'>option8</option>
+                    <option value='9'>option9</option>
+                    <option value='10'>option10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-12 mb-3">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Ara">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-outline-success btn-sm"><i class="fa fa-search"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card card-course text-center">
+                <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+                <img alt="" class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+                <div class="card-block p-3">
+                  <h2 class="card-title font-weight-normal text-left mt-5 mb-2">Atatürk İlkeleri Atatürk İlkeleri ve İnkılap Tarihi I Atatürk İlkeleri ve İnkılap Tarihi I</h2>
+                  <p class="card-text text-left"><i class="fa fa-user-o pr-2"></i>Anderson Hardy</p>
+                  <div class="row">
+                    <div class="col text-right">
+                      <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="fa fa-gear"></i> Bilgiler</a>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-sm ml-3 mt-2"><i class="fa fa-edit"></i> Güncelle</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card card-course text-center">
+                <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+                <img alt="" class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+                <div class="card-block p-3">
+                  <h2 class="card-title font-weight-normal text-left mt-5 mb-2">Atatürk İlkeleri Atatürk İlkeleri ve İnkılap Tarihi I Atatürk İlkeleri ve İnkılap Tarihi I</h2>
+                  <p class="card-text text-left"><i class="fa fa-user-o pr-2"></i>Anderson Hardy</p>
+                  <div class="row">
+                    <div class="col text-right">
+                      <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="fa fa-gear"></i> Bilgiler</a>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-sm ml-3 mt-2"><i class="fa fa-edit"></i> Güncelle</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card card-course text-center">
+                <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+                <img alt="" class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+                <div class="card-block p-3">
+                  <h2 class="card-title font-weight-normal text-left mt-5 mb-2">Atatürk İlkeleri Atatürk İlkeleri ve İnkılap Tarihi I Atatürk İlkeleri ve İnkılap Tarihi I</h2>
+                  <p class="card-text text-left"><i class="fa fa-user-o pr-2"></i>Anderson Hardy</p>
+                  <div class="row">
+                    <div class="col text-right">
+                      <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="fa fa-gear"></i> Bilgiler</a>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-sm ml-3 mt-2"><i class="fa fa-edit"></i> Güncelle</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card card-course text-center">
+                <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+                <img alt="" class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+                <div class="card-block p-3">
+                  <h2 class="card-title font-weight-normal text-left mt-5 mb-2">Atatürk İlkeleri Atatürk İlkeleri ve İnkılap Tarihi I Atatürk İlkeleri ve İnkılap Tarihi I</h2>
+                  <p class="card-text text-left"><i class="fa fa-user-o pr-2"></i>Anderson Hardy</p>
+                  <div class="row">
+                    <div class="col text-right">
+                      <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="fa fa-gear"></i> Bilgiler</a>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-sm ml-3 mt-2"><i class="fa fa-edit"></i> Güncelle</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card card-course text-center">
+                <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+                <img alt="" class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+                <div class="card-block p-3">
+                  <h2 class="card-title font-weight-normal text-left mt-5 mb-2">Atatürk İlkeleri Atatürk İlkeleri ve İnkılap Tarihi I Atatürk İlkeleri ve İnkılap Tarihi I</h2>
+                  <p class="card-text text-left"><i class="fa fa-user-o pr-2"></i>Anderson Hardy</p>
+                  <div class="row">
+                    <div class="col text-right">
+                      <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="fa fa-gear"></i> Bilgiler</a>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-sm ml-3 mt-2"><i class="fa fa-edit"></i> Güncelle</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <ul class="pagination mt-3 mb-5 justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Denizbank &copy; 2017</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <a href="https://www.mimcrea.com" class="external font-weight-bold">MIMCREA</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="js/jquery-3-2-1.min.js"></script>
+    <script src="js/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/front.js"></script>
+
+    <script src="vendor/select2/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $(".select2").select2();
+      });
+    </script>
+
+  </body>
+</html>
