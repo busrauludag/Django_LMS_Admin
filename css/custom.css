@@ -176,3 +176,15 @@ header h1 button {
 	cursor: pointer;
 }
 /*courses- courseDetails*/
+
+.card-course .card-dropdown-options{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.card-course .card-dropdown-options .dropdown-toggle:hover i,
+.card-course .card-dropdown-options.show .dropdown-toggle i,
+.card-course .card-dropdown-options.show .dropdown-toggle::after,
+.card-course .card-dropdown-options .dropdown-toggle:hover::after{
+  color: #212529;
+}
