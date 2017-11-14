@@ -1,0 +1,139 @@
+/**
+* CSS themes for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
+
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 5px 12px;
+	margin: 0;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+span.ellipse.clickable {
+	cursor: pointer;
+}
+
+.simple-pagination li a, .simple-pagination li span{
+	padding: 5px 12px;
+}
+
+.ellipse input {
+	width: 3em;
+}
+
+/*------------------------------------*\
+	Compact Theme Styles
+\*------------------------------------*/
+.compact-theme span {
+	cursor:pointer;
+}
+
+.compact-theme a, .compact-theme span {
+	float: left;
+	color: #333;
+	font-size:14px;
+	line-height:24px;
+	font-weight: normal;
+	text-align: center;
+	min-width: 14px;
+	padding: 5px 12px;
+	background: #fff; /* Old browsers */
+	
+}
+
+.compact-theme a:hover, .compact-theme li:not(.disabled):not(.active) span:hover {
+	text-decoration: none;
+	background: #fff; /* Old browsers */
+	cursor: pointer;
+}
+
+.compact-theme li:first-child a, .compact-theme li:first-child span {
+}
+
+.compact-theme li:last-child a, .compact-theme li:last-child span {
+}
+
+.compact-theme .current {
+	background: #fff; /* Old browsers */
+	cursor: default;
+}
+
+.compact-theme .ellipse {
+	background: #fff;
+	padding: 5px 12px;
+	cursor: default;
+	border: 1px solid #ddd;
+	border-left: none;
+}
+
+/* .light-theme .ellipse {
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	font-weight: bold;
+	cursor: default;
+} */
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.light-theme span {
+	cursor:pointer;
+}
+
+.light-theme a, .light-theme span {
+	float: left;
+	color: #118496;
+	font-size:14px;
+	line-height:24px;
+	font-weight: normal;
+	text-align: center;
+	/* border: 1px solid #BBB; */
+	min-width: 14px;
+	padding: 5px 12px;
+	background: #fff; /* Old browsers */
+}
+
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+	text-decoration: none;
+	background: #ddd;
+	color: #118496;
+}
+
+.light-theme .current {
+	background: #188496;
+	color: #fff;
+	border: 1px solid #118496;
+	cursor: default;
+	padding: 5px 12px;
+}
+
+.light-theme .current.prev,
+.light-theme .current.next {
+	background: #fff;
+	color: #aaa;
+	border: 1px solid #ddd;
+	cursor: not-allowed;
+	padding: 5px 12px;
+}
+
+
