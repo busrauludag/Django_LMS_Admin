@@ -1,9 +1,3 @@
-/**
-* CSS themes for simplePagination.js
-* Author: Flavius Matis - http://flaviusmatis.github.com/
-* URL: https://github.com/flaviusmatis/simplePagination.js
-*/
-
 ul.simple-pagination {
 	list-style: none;
 }
@@ -48,7 +42,6 @@ span.ellipse.clickable {
 
 .compact-theme a, .compact-theme span {
 	float: left;
-	color: #333;
 	font-size:14px;
 	line-height:24px;
 	font-weight: normal;
@@ -64,13 +57,6 @@ span.ellipse.clickable {
 	background: #fff; /* Old browsers */
 	cursor: pointer;
 }
-
-.compact-theme li:first-child a, .compact-theme li:first-child span {
-}
-
-.compact-theme li:last-child a, .compact-theme li:last-child span {
-}
-
 .compact-theme .current {
 	background: #fff; /* Old browsers */
 	cursor: default;
@@ -83,50 +69,12 @@ span.ellipse.clickable {
 	border: 1px solid #ddd;
 	border-left: none;
 }
-
-/* .light-theme .ellipse {
-	background: none;
-	border: none;
-	border-radius: 0;
-	box-shadow: none;
-	font-weight: bold;
-	cursor: default;
-} */
-
 /*------------------------------------*\
 	Light Theme Styles
 \*------------------------------------*/
 .light-theme span {
 	cursor:pointer;
 }
-
-.light-theme a, .light-theme span {
-	float: left;
-	color: #118496;
-	font-size:14px;
-	line-height:24px;
-	font-weight: normal;
-	text-align: center;
-	/* border: 1px solid #BBB; */
-	min-width: 14px;
-	padding: 5px 12px;
-	background: #fff; /* Old browsers */
-}
-
-.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
-	text-decoration: none;
-	background: #ddd;
-	color: #118496;
-}
-
-.light-theme .current {
-	background: #188496;
-	color: #fff;
-	border: 1px solid #118496;
-	cursor: default;
-	padding: 5px 12px;
-}
-
 .light-theme .current.prev,
 .light-theme .current.next {
 	background: #fff;
@@ -135,5 +83,26 @@ span.ellipse.clickable {
 	cursor: not-allowed;
 	padding: 5px 12px;
 }
-
-
+.light-theme a, .light-theme span {
+  float: left;
+  color: #546e7a;
+  font-size:14px;
+  line-height:24px;
+  font-weight: normal;
+  text-align: center;
+  min-width: 14px;
+  padding: 5px 12px;
+  background: #fff; /* Old browsers */
+}
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+  text-decoration: none;
+  background: #ddd;
+  color: #546e7a;
+}
+.light-theme .current {
+  background: #546e7a;
+  color: #fff;
+  border: 1px solid #546e7a;
+  cursor: default;
+  padding: 5px 12px;
+}
