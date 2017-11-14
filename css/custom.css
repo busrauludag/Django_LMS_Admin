@@ -188,3 +188,62 @@ header h1 button {
 .card-course .card-dropdown-options .dropdown-toggle:hover::after{
   color: #212529;
 }
+
+.file {
+  position: relative;
+  height: 2.5rem;
+  width: 100%;
+}
+.file input {
+  min-width: 14rem;
+  margin: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.file-custom {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.file-custom, .file-custom:before {
+  position: absolute;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+.file-custom::after { 
+	content: ""; 
+}
+.file-custom { 
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+.file-custom:empty::after { 
+  content: "Seçin..."; 
+}
+.file-custom, .file-custom:before {
+  position: absolute;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+.file-custom:before {
+  top: 0px;
+  right: -.075rem;
+  bottom: -.075rem;
+  z-index: 6;
+  display: block;
+  content: "Seç";
+  background-color: #607d8b;
+  /* border: 1px solid #ddd; */
+  color: #eee;
+}

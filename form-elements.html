@@ -548,6 +548,16 @@
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Multiple File Input - 2</label>
+                      <div class="col-sm-10">
+                        <label class="file">
+                          <input type="file" multiple>
+                          <span class="file-custom"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
                       <label class="col-sm-2 form-control-label">CKEditor</label>
                       <div class="col-sm-10">
                         <textarea name="my-editor"></textarea>
@@ -720,6 +730,7 @@
         </div>
       </div>
     </div>
+
     <!-- Javascript files-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
@@ -767,6 +778,32 @@
         $('.tab-pane').addClass('show');
       }
       // wizard
+
+      // file input js
+      var doc = document,
+      supportsMultipleFiles = "multiple" in doc.createElement("input");
+
+      $(doc).on("change", ".file > input[type=file]", function () {
+          var input = this,
+              fileNames = [],
+              label = input.nextElementSibling,
+              files, len, i = -1, labelValue;
+              
+          if (supportsMultipleFiles) {
+              len = (files = input.files).length;
+              
+              while (++i < len) {
+                  fileNames.push(files[i].name);
+              }
+          }
+          else {
+              fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+          }
+          
+          label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+          label.setAttribute("title", labelValue);
+      });
+      // file input js
 
 
       $(document).ready(function() {
