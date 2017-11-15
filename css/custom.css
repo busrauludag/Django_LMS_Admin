@@ -219,15 +219,12 @@ header h1 button {
   line-height: 1.5;
   color: #555;
 }
-.file-custom::after { 
+/* .file-custom::after { 
 	content: ""; 
-}
+} */
 .file-custom { 
   overflow: hidden; 
   white-space: nowrap; 
-}
-.file-custom:empty::after { 
-  content: "Seçin..."; 
 }
 .file-custom, .file-custom:before {
   position: absolute;
@@ -236,16 +233,16 @@ header h1 button {
   line-height: 1.5;
   color: #555;
 }
-.file-custom:before {
-  top: 0px;
+.file-input-text{
+	background-color: #607d8b;
+	position: absolute;
+	color: #fff !important;
+	top: 0px;
   right: -.075rem;
   bottom: -.075rem;
-  z-index: 6;
-  display: block;
-  content: "Seç";
-  background-color: #607d8b;
-  /* border: 1px solid #ddd; */
-  color: #eee;
+	z-index: 6;
+	float: right;
+	padding: 10px;
 }
 .course-info-btn{
 	position: absolute;
