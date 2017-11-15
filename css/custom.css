@@ -243,6 +243,7 @@ header h1 button {
 	z-index: 6;
 	float: right;
 	padding: 10px;
+	height: 100%;
 }
 .course-info-btn{
 	position: absolute;

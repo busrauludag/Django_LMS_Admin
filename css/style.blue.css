@@ -44,11 +44,6 @@ p {
   color: #888;
 }
 
-i[class*='icon-'] {
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
-}
-
 table {
   font-size: 0.9em;
   color: #666;
