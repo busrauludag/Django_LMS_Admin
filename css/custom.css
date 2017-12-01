@@ -311,3 +311,14 @@ header h1 button {
 	left: 6px;
 }
 /*custom-radio*/
+/*accordion-menu*/
+#accordion .toggle-icon {
+	display: inline;
+	margin-right: 10px;
+	font-size: 20px;
+}
+#accordion .card-header {
+	background-color: #eceff1;
+	border-bottom-color: #cfd6db;
+}
+/*accordion-menu*/
