@@ -2,7 +2,7 @@
 /public/hot
 /node_modules
 /vendor
-.idea/
+.idea/*
 
 /storage/*.key
 
