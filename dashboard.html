@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <!-- Custom icon font-->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <!-- Google fonts - Roboto -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <!-- jQuery Circle-->
+  <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+  <!-- Custom Scrollbar-->
+  <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+
+  <style>
+    /* Morris charts */
+    .morris-hover {
+      color: #666;
+      font-family: sans-serif;
+      font-size: 12px;
+      text-align: center;
+      position: absolute;
+      z-index: 1000;
+      background: #415365 !important;
+      border-color: #415365 !important;
+      padding: 5px 20px !important;
+      -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .morris-hover .morris-hover-row-label {
+      margin: 0.25em 0;
+      font-size: 13px !important;
+      color: #92ABB8 !important;
+      font-weight: 600 !important;
+    }
+    .morris-hover .morris-hover-point {
+      white-space: nowrap;
+      margin: 0.1em 0;
+      font-size: 13px !important;
+      color: #FFF !important;
+      font-weight: 400 !important;
+    }
+    /* END Morris charts */
+    .card {
+      height: auto;
+      margin-bottom: 30px;
+    }
+    canvas {display: block;margin: 0 auto;}
+  </style>
+
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+  <div class="side-navbar-wrapper">
+    <div class="sidenav-header d-flex align-items-center justify-content-center">
+      <a href="/org/101/dashboard/" class="sidenav-header-inner text-center">
+        <img src="img/denizbank_logo_2.png" alt="person" class="img-fluid rounded-circle">
+        <h2 class="h5 text-uppercase">manager</h2><span class="text-uppercase">LMS MT</span>
+      </a>
+      <div class="sidenav-header-logo">
+        <a href="#!" class="brand-small text-center">
+          <img src="img/denizbank_logo_2.png" alt="" class="mx-auto">
+        </a>
+      </div>
+    </div>
+    <div class="main-menu">
+      <ul id="side-main-menu" class="side-menu list-unstyled">
+        <li class=""><a href="#">
+          <i class="fa fa-shopping-bag"></i><span>Marketplace</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-user"></i><span>Users</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-book"></i><span>Course</span></a>
+        </li>
+        <ul id="side-admin-menu" class="side-menu list-unstyled">
+          <li>
+            <a href="#users" data-toggle="collapse" aria-expanded="false"><i class="fa fa-flask"></i><span>Information</span>
+              <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+            </a>
+            <ul id="users" class="collapse list-unstyled">
+              <li> <a href="#"><i class="fa fa-flag"></i> Announcements</a></li>
+              <li> <a href="#"><i class="fa fa-comments-o"></i> Notifications</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="side-admin-menu" class="side-menu list-unstyled">
+          <li>
+            <a href="#users" data-toggle="collapse" aria-expanded="false"><i class="fa fa-university"></i><span>Academic</span>
+              <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+            </a>
+            <ul id="users" class="collapse list-unstyled">
+              <li> <a href="#"><i class="fa fa-building"></i> Departments</a></li>
+              <li> <a href="#"><i class="fa fa-building"></i> Faculties</a></li>
+              <li> <a href="#"><i class="fa fa-building"></i> Education Periods</a></li>
+              <li> <a href="#"><i class="fa fa-building"></i> Semesters</a></li>
+              <li> <a href="#"><i class="fa fa-building"></i> Enrollments</a></li>
+            </ul>
+          </li>
+        </ul>
+        <li>
+          <a href="#"><i class="fa fa-hdd-o"></i><span>Media Hub</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-certificate"></i><span>Certificate</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-braille"></i><span>Exam</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-question-circle"></i><span>FAQ</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="page home-page">
+  <!-- navbar-->
+  <header class="header">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-holder d-flex align-items-center justify-content-between">
+          <div class="navbar-header">
+            <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-menu"> </i></a><a href="index.html" class="navbar-brand">
+            <div class="brand-text d-none d-md-inline-block">
+              <img src="img/logo-white.png" alt="">
+            </div>
+          </a>
+          </div>
+          <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+            <li class="nav-item dropdown mr-2">
+              <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                <i class="fa fa-search"></i>
+              </a>
+              <ul aria-labelledby="notifications" class="dropdown-menu search-menu">
+                <li>
+                  <form action="">
+                    <div class="input-group">
+                      <input type="text" class="form-control form-control-sm" placeholder="Ara...">
+                      <span class="input-group-btn">
+                            <button class="btn btn-secondary btn-sm" type="button">Ara</button>
+                          </span>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mr-2">
+              <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                <i class="fa fa-bell"></i><span class="bg-info new-info rounded-circle"></span>
+              </a>
+              <ul aria-labelledby="notifications" class="dropdown-menu notification-menu">
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                      <div class="notification-time"><small>4 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                      <div class="notification-time"><small>4 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                      <div class="notification-time"><small>4 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                      <div class="notification-time"><small>10 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                      <div class="notification-time"><small>10 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                      <div class="notification-time"><small>10 minutes ago</small></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                    <strong> Tümünü Göster </strong>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mr-2">
+              <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                <i class="fa fa-envelope"></i><span class="bg-info new-info rounded-circle"></span>
+              </a>
+              <ul aria-labelledby="notifications" class="dropdown-menu message-menu">
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                    <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                    <div class="msg-body">
+                      <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                    <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                    <div class="msg-body">
+                      <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                    <strong> <i class="fa fa-envelope"></i>Read all messages</strong>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mr-2">
+              <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                <i class="fa fa-user"></i>
+              </a>
+              <ul class="dropdown-menu profile-menu">
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                    <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                    <div class="msg-body">
+                      <h3 class="h5">Anderson Hardy</h3><small>Admin</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-user"></i> Profile</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-cog"></i> Settings</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" href="#" class="dropdown-item">
+                    <div class="notification d-flex justify-content-between">
+                      <div class="notification-content"><i class="fa fa-sign-out"></i> Çıkış</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Counts Section -->
+  <section class="dashboard-counts section-padding">
+    <div class="container-fluid">
+
+    </div>
+  </section>
+
+
+  <hr>
+
+  <!-- Charts Chart -->
+  <section class="updates section-padding">
+    <div class="container-fluid">
+      <header>
+        <h1 class="h2 display pb-1">Charts Chart</h1>
+        <div class="title-divider"></div>
+      </header>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Line Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="line-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Bar Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="bar-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Donut Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="donut-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Pie Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="pie-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Radar Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="radar-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Polar Area Chart</h2>
+            </div>
+            <div class="card-body">
+              <canvas id="polar-area-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Morris Charts -->
+  <section class="updates section-padding">
+    <div class="container-fluid">
+      <header>
+        <h1 class="h2 display pb-1">Morris Charts</h1>
+        <div class="title-divider"></div>
+      </header>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Line Chart</h2>
+            </div>
+            <div class="card-body">
+              <div id="morris-line-example" style="height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Bar Chart</h2>
+            </div>
+            <div class="card-body">
+              <div id="morris-bar-example" style="height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Donut Chart</h2>
+            </div>
+            <div class="card-body">
+              <div id="morris-donut-example" style="height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display display">Area Chart</h2>
+            </div>
+            <div class="card-body">
+              <div id="morris-area-example" style="height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>&copy; Mimcrea 2017</p>
+        </div>
+        <div class="col-sm-6 text-right">
+          <a href="https://www.mimcrea.com" class="external font-weight-bold">LMS MT</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- Javascript files-->
+<script src="js/jquery-3-2-1.min.js"></script>
+<script src="js/popper.min.js"> </script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/front.js"></script>
+
+<script src="vendor/morris/raphael-min.js"></script>
+<script src="vendor/morris/morris.min.js"></script>
+
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/chart.js/demo-chartjs.js"></script>
+
+<script>
+    var morrisCharts = function() {
+
+        Morris.Line({
+            element: 'morris-line-example',
+            data: [
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75,  b: 65 },
+                { y: '2008', a: 50,  b: 40 },
+                { y: '2009', a: 75,  b: 65 },
+                { y: '2010', a: 50,  b: 40 },
+                { y: '2011', a: 75,  b: 65 },
+                { y: '2012', a: 100, b: 90 }
+            ],
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B'],
+            resize: true,
+            lineColors: ['#2b333e', '#17a2b8']
+        });
+
+
+        Morris.Area({
+            element: 'morris-area-example',
+            data: [
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75,  b: 65 },
+                { y: '2008', a: 50,  b: 40 },
+                { y: '2009', a: 75,  b: 65 },
+                { y: '2010', a: 50,  b: 40 },
+                { y: '2011', a: 75,  b: 65 },
+                { y: '2012', a: 100, b: 90 }
+            ],
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B'],
+            resize: true,
+            lineColors: ['#3FBAE4', '#FEA223']
+        });
+
+
+        Morris.Bar({
+            element: 'morris-bar-example',
+            data: [
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75,  b: 65 },
+                { y: '2008', a: 50,  b: 40 },
+                { y: '2009', a: 75,  b: 65 },
+                { y: '2010', a: 50,  b: 40 },
+                { y: '2011', a: 75,  b: 65 },
+                { y: '2012', a: 100, b: 90 }
+            ],
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B'],
+            barColors: ['#2b333e', '#17a2b8']
+        });
+
+
+        Morris.Donut({
+            element: 'morris-donut-example',
+            data: [
+                {label: "Download Sales", value: 12},
+                {label: "In-Store Sales", value: 30},
+                {label: "Mail-Order Sales", value: 20}
+            ],
+            colors: ['#2b333e', '#17a2b8', '#FEA223']
+        });
+
+    }();
+</script>
+
+</body>
+</html>

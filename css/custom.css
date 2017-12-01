@@ -263,3 +263,51 @@ header h1 button {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
+/*custom-radio*/
+.i-checks-lg input.form-control-custom + label {
+	margin-bottom: 10px;
+	padding-left: 40px;
+}
+.i.checks-lg input.form-control-custom + label span {
+	margin-left: 20px;
+}
+.i-checks-lg input.form-control-custom + label::before {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+}
+.i-checks-lg input.form-control-custom + label::after {
+	font-size: 12px;
+	top: 6px;
+	left: 6px;
+}
+.i-checks-lg input.form-control-custom.radio-custom + label::after {
+	width: 11px;
+	height: 11px;
+	line-height: 12px;
+	top: 9px;
+	left: 7px;
+}
+
+.i-checks-md input.form-control-custom + label {
+	margin-bottom: 10px;
+	padding-left: 30px;
+}
+.i-checks-md input.form-control-custom + label::before {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+.i-checks-md input.form-control-custom + label::after {
+	font-size: 10px;
+	top: 5px;
+	left: 5px;
+}
+.i-checks-md input.form-control-custom.radio-custom + label::after {
+	width: 8px;
+	height: 8px;
+	line-height: 8px;
+	top: 8px;
+	left: 6px;
+}
+/*custom-radio*/
