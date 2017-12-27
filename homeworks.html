@@ -299,6 +299,18 @@
         <header>
           <h1 class="h3 display">Ödev Ekle</h1>
         </header>
+        <div class="alert alert-info rounded-0" role="alert">
+          <p class="m-0 text-secondary">
+            Rubrik oluşturmak için
+            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#rubricModal">tıklayınız.</a>
+          </p>
+        </div>
+        <div class="alert alert-info rounded-0" role="alert">
+          <p class="m-0 text-secondary">
+            Marking Guide oluşturmak için
+            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#markingGuideModal">tıklayınız.</a>
+          </p>
+        </div>
         <div class="row">
           <div class="col-lg-12 mb-3">
             <div class="card">
@@ -610,7 +622,121 @@
     </footer>
   </div>
 
-  
+
+  <!-- Rubric Modal-->
+  <div id="rubricModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
+    <div role="document" class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="exampleModalLabel" class="modal-title">Rubric Modal</h5>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal forms">
+            <div class="form-group row">
+              <label class="col-sm-2 form-control-label">Adı</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mb-5">
+              <label class="col-sm-2 form-control-label">Açıklama</label>
+              <div class="col-sm-10">
+                <textarea name="my-editor-2"></textarea>
+              </div>
+            </div>
+            <h2 class="h5 display">Rubric Ayarları</h2>
+            <div class="line"></div>
+            <div class="form-group row">
+              <label class="col-sm- form-control-label">Öğrenci notlandırılmadan önce rubriği görebilsin</label>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom15" type="radio" value="option1" name="h" class="form-control-custom radio-custom" checked>
+                  <label for="radioCustom15">Evet</label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom16" type="radio" value="option2" name="h" class="form-control-custom radio-custom">
+                  <label for="radioCustom16">Hayır</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm- form-control-label">Öğrenci notlandırmadan sonra rubriği görebilsin</label>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom17" type="radio" value="option1" name="i" class="form-control-custom radio-custom" checked>
+                  <label for="radioCustom17">Evet</label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom18" type="radio" value="option2" name="i" class="form-control-custom radio-custom">
+                  <label for="radioCustom18">Hayır</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm- form-control-label">Öğretmen her bir kriter için yorum yapabilsin</label>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom19" type="radio" value="option1" name="j" class="form-control-custom radio-custom" checked>
+                  <label for="radioCustom19">Evet</label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="i-checks">
+                  <input id="radioCustom20" type="radio" value="option2" name="j" class="form-control-custom radio-custom">
+                  <label for="radioCustom20">Hayır</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10 offset-sm-2 text-right">
+                <button type="submit" class="btn btn-danger">İptal</button>
+                <button type="submit" class="btn btn-info">Kaydet</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marking Guide Modal-->
+  <div id="markingGuideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
+    <div role="document" class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="exampleModalLabel" class="modal-title">Marking Guide Modal</h5>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal forms">
+            <div class="form-group row">
+              <label class="col-sm-2 form-control-label">Adı</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mb-5">
+              <label class="col-sm-2 form-control-label">Açıklama</label>
+              <div class="col-sm-10">
+                <textarea name="my-editor-3"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Javascript files-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
@@ -634,6 +760,8 @@
   <script>
 
     CKEDITOR.replace('my-editor');
+    CKEDITOR.replace('my-editor-2');
+    CKEDITOR.replace('my-editor-3');
 
     // homework add tag
 
