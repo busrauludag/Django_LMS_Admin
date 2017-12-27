@@ -322,3 +322,16 @@ header h1 button {
 	border-bottom-color: #cfd6db;
 }
 /*accordion-menu*/
+/* homework criterion */
+.criterion-table input:focus{
+	box-shadow: none !important;
+}
+.criterion-table td{
+	padding: 0 !important;
+}
+@media (min-width: 1100px){
+	.modal-lg {
+		max-width: 1000px;
+	}
+}
+/* homework criterion */

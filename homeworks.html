@@ -730,6 +730,53 @@
                 <textarea name="my-editor-3"></textarea>
               </div>
             </div>
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <div class="h2 float-left">Kriterler</div>
+                <button type="button" class="btn btn-info btn-sm float-right" onclick="appendColumn()">
+                  <i class="fa fa-plus"></i> Seviye Ekle
+                </button>
+              </div>
+              <div class="col-sm-12">
+                <table class="table table-bordered criterion-table" id="my-table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-sm-12">
+                <button type="button" class="btn btn-info btn-sm" onclick="appendRow()">
+                  <i class="fa fa-plus"></i> Kriter Ekle
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -754,6 +801,38 @@
   <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
   <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.tr.js"></script>
   <script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+  <script>
+    function appendColumn() {
+      var tbl = document.getElementById('my-table'), i;
+      for (i = 0; i < tbl.rows.length; i++) {
+        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
+      }
+    }
+
+    function appendRow() {
+      var tbl = document.getElementById('my-table'),
+        row = tbl.insertRow(tbl.rows.length), i;
+      for (i = 0; i < tbl.rows[0].cells.length; i++) {
+        if (i === 0) {
+          createCell(row.insertCell(i), 'form-control border-0', '');
+        } else {
+          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
+
+        }
+      }
+    }
+
+    function createCell(cell, style, attr) {
+      var input = document.createElement('input');
+      input.setAttribute('class', style);
+      input.setAttribute('className', style);
+      input.setAttribute('placeholder', attr);
+      cell.appendChild(input);
+    }
+  </script>
+
 
 
 
