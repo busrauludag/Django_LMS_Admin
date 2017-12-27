@@ -742,24 +742,21 @@
                   <tbody>
                     <tr>
                       <td>
-                        <input type="text" name="password" class="form-control border-0">
+                        <!-- <button type="button" onclick="deleteRow(this)" class="btn btn-danger btn-sm">
+                          <i class="fa fa-minus fa-fw"></i>
+                        </button> -->
                       </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                    </tr>
-                    <tr>
                       <td>
                         <input type="text" name="password" class="form-control border-0">
+                        <button type="button" onclick="deleteColumn(this)" class="btn btn-danger btn-sm">
+                          <i class="fa fa-minus fa-fw"></i>
+                        </button>
                       </td>
                       <td>
                         <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                        <button type="button" onclick="deleteColumn(this)" class="btn btn-danger btn-sm">
+                          <i class="fa fa-minus fa-fw"></i>
+                        </button>
                       </td>
                       <td>
                         <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
@@ -816,6 +813,8 @@
         row = tbl.insertRow(tbl.rows.length), i;
       for (i = 0; i < tbl.rows[0].cells.length; i++) {
         if (i === 0) {
+          createBtnCell(row.insertCell(i), 'btn btn-danger btn-xs mt-2');
+        } else if (i === 1) {
           createCell(row.insertCell(i), 'form-control border-0', '');
         } else {
           createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
@@ -827,9 +826,29 @@
     function createCell(cell, style, attr) {
       var input = document.createElement('input');
       input.setAttribute('class', style);
-      input.setAttribute('className', style);
       input.setAttribute('placeholder', attr);
       cell.appendChild(input);
+    }
+
+    function createBtnCell(cell, style) {
+      var btn = document.createElement('button');
+      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
+      btn.setAttribute('class', style);
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('onclick', 'deleteRow(this)');
+      cell.appendChild(btn);
+    }
+
+    function deleteRow(row) {
+      var tbl = document.getElementById('my-table');
+      var tblRow = row.parentElement.parentElement;
+      tbl.deleteRow(tblRow.rowIndex);
+    }
+
+    function deleteColumn(col) {
+      var tbl = document.getElementById('my-table');
+      var tblCol = col.parentElement.parentElement;
+      tbl.deleteRow(tblRow.rowIndex);
     }
   </script>
 
