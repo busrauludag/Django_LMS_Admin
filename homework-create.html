@@ -26,6 +26,12 @@
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="css/custom.css">
 
+  <link rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+  <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-fileupload/css/fileinput.min.css">
+  <link rel="stylesheet" href="vendor/dropzone/css/dropzone.min.css">
+
 </head>
 
 <body>
@@ -284,348 +290,319 @@
           <li class="breadcrumb-item">
             <a href="index.html">Anasayfa</a>
           </li>
-          <li class="breadcrumb-item active">Ödevler</li>
+          <li class="breadcrumb-item">
+            <a href="homeworks.html">Ödevler</a>
+          </li>
+          <li class="breadcrumb-item active">Ödev Ekle</li>
         </ul>
       </div>
     </div>
     <section>
       <div class="container-fluid">
         <header>
-          <h1 class="h3 display">Ödevler</h1>
+          <h1 class="h3 display">Ödev Ekle</h1>
         </header>
+        <div class="alert alert-info rounded-0" role="alert">
+          <p class="m-0 text-secondary">
+            Rubrik oluşturmak için
+            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#rubricModal">tıklayınız.</a>
+          </p>
+        </div>
+        <div class="alert alert-info rounded-0" role="alert">
+          <p class="m-0 text-secondary">
+            Marking Guide oluşturmak için
+            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#markingGuideModal">tıklayınız.</a>
+          </p>
+        </div>
         <div class="row">
           <div class="col-lg-12 mb-3">
             <div class="card">
               <div class="card-body">
-                <div id="homeworkAccordion" role="tablist" class="homework-accordion">
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingOne">
-                      <h5 class="mb-0">
-                        <a class="collapsed text-info" data-toggle="collapse" href="#homeworkOne" aria-expanded="true" aria-controls="collapseOne">
-                          Ödev 1
-                        </a>
-                        <small class="text-secondary float-right">
-                          <span class="mr-1">
-                            <i class="fa fa-user fa-fw"></i> 30</span> |
-                          <span class="ml-1">
-                            <i class="fa fa-calendar fa-fw"></i> 15.01.2018</span>
-                        </small>
-                      </h5>
+                <form class="form-horizontal forms">
+                  <h2 class="h5 display">Genel</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Ödev Adı</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
                     </div>
-                    <div id="homeworkOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#homeworkAccordion">
-                      <div class="card-body">
-                        <table class="table table-responsive">
-                          <thead>
-                            <tr>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                              <th class="border-0 p-1" scope="col">Adı Soyadı</th>
-                              <th class="border-0 p-1" scope="col">E-Posta</th>
-                              <th class="border-0 p-1" scope="col">Not</th>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination pagination-sm">
-                            <li class="page-item">
-                              <a class="page-link text-info" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                            </li>
-                            <li class="page-item active">
-                              <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Açıklama</label>
+                    <div class="col-sm-10">
+                      <textarea name="my-editor"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Ödevin İlişkili Olduğu Konu</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Erişilebilirlik</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Yüklemeye Başlama Tarihi</label>
+                    <div class="col-sm-10">
+                      <div class="input-group date datetime-picker">
+                        <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                        </span>
+                        <input type="text" class="form-control" name="datetime">
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingTwo">
-                      <h5 class="mb-0">
-                        <a class="collapsed text-info" data-toggle="collapse" href="#homeworkTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Ödev 2
-                        </a>
-                        <small class="text-secondary float-right">
-                          <span class="mr-1">
-                            <i class="fa fa-user fa-fw"></i> 30</span> |
-                          <span class="ml-1">
-                            <i class="fa fa-calendar fa-fw"></i> 15.01.2018</span>
-                        </small>
-                      </h5>
-                    </div>
-                    <div id="homeworkTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#homeworkAccordion">
-                      <div class="card-body">
-                        <table class="table table-responsive">
-                          <thead>
-                            <tr>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                              <th class="border-0 p-1" scope="col">Adı Soyadı</th>
-                              <th class="border-0 p-1" scope="col">E-Posta</th>
-                              <th class="border-0 p-1" scope="col">Not</th>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination pagination-sm">
-                            <li class="page-item">
-                              <a class="page-link text-info" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                            </li>
-                            <li class="page-item active">
-                              <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Son Yükleme Tarihi</label>
+                    <div class="col-sm-10">
+                      <div class="input-group date datetime-picker">
+                        <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                        </span>
+                        <input type="text" class="form-control" name="datetime">
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingThree">
-                      <h5 class="mb-0">
-                        <a class="collapsed text-info" data-toggle="collapse" href="#homeworkThree" aria-expanded="false" aria-controls="collapseThree">
-                          Ödev 3
-                        </a>
-                        <small class="text-secondary float-right">
-                          <span class="mr-1">
-                            <i class="fa fa-user fa-fw"></i> 30</span> |
-                          <span class="ml-1">
-                            <i class="fa fa-calendar fa-fw"></i> 15.01.2018</span>
-                        </small>
-                      </h5>
-                    </div>
-                    <div id="homeworkThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#homeworkAccordion">
-                      <div class="card-body">
-                        <table class="table table-responsive">
-                          <thead>
-                            <tr>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                              <th class="border-0 p-1" scope="col">Adı Soyadı</th>
-                              <th class="border-0 p-1" scope="col">E-Posta</th>
-                              <th class="border-0 p-1" scope="col">Not</th>
-                              <th class="border-0 p-1" scope="col" width="5%"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th class="p-1" scope="row">
-                                <img src="img/avatar-2.png" alt="" class="rounded-circle">
-                              </th>
-                              <td class="p-1">Ahmet YILDIZ</td>
-                              <td class="p-1">ahmet@mimcrea.com</td>
-                              <td class="p-1">70/100</td>
-                              <td class="p-1">
-                                <button type="button" class="btn btn-outline-info btn-sm">
-                                  <i class="fa fa-eye"></i> İncele
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination pagination-sm">
-                            <li class="page-item">
-                              <a class="page-link text-info" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                            </li>
-                            <li class="page-item active">
-                              <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                              <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Uzatma Dahil Kesin Bitiş Tarihi</label>
+                    <div class="col-sm-10">
+                      <div class="input-group date datetime-picker">
+                        <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                        </span>
+                        <input type="text" class="form-control" name="datetime">
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Puanlamayı Hatırlatma Tarihi</label>
+                    <div class="col-sm-10">
+                      <div class="input-group date datetime-picker">
+                        <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                        </span>
+                        <input type="text" class="form-control" name="datetime">
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Notlandırma</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">En Yüksek Puan</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Uzatma Süresinde Gönderilen Ödev İçin En Yüksek Puan</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Ödevin Ağırlığı (%)</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Notlandırma Metodu</label>
+                    <div class="col-sm-10">
+                      <select name="account" class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Geçme Notu Kullan</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom1" type="radio" value="option1" name="a" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom1">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom2" type="radio" value="option2" name="a" class="form-control-custom radio-custom">
+                        <label for="radioCustom2">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Geçme Notu</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Ödev Yükleme Çeşitleri</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Yükleme Çeşitleri</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="checkboxCustom3" type="checkbox" value="" checked class="form-control-custom">
+                        <label for="checkboxCustom3">Dosya Yükleme</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="checkboxCustom4" type="checkbox" value="" class="form-control-custom">
+                        <label for="checkboxCustom4">Çevrimiçi Metin</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Kelime Sınırı</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Yüklenecek Maksimum Dosya Sayısı</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Dönüt Çeşitleri</h2>
+                  <div class="line"></div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Dönüt Çeşitleri</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="checkboxCustom1" type="checkbox" value="" checked class="form-control-custom">
+                        <label for="checkboxCustom1">Yorumla Dönüt</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
+                        <label for="checkboxCustom2">Dönüt Dosyası</label>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Ödev Yükleme Ayarları</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Öğrencilerin Gönder Düğmesine Tıklamasını Zorunlu Kıl</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom3" type="radio" value="option3" name="b" class="form-control-custom radio-custom">
+                        <label for="radioCustom3">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom4" type="radio" value="option4" name="b" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom4">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Öğrencilerin Gönderme Bildirimini Kabul Etmelerini Zorunlu Kıl</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom5" type="radio" value="option1" name="c" class="form-control-custom radio-custom">
+                        <label for="radioCustom5">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom6" type="radio" value="option2" name="c" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom6">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Taslağı Görmeye İzin Ver</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom7" type="radio" value="option1" name="d" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom7">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom8" type="radio" value="option2" name="d" class="form-control-custom radio-custom">
+                        <label for="radioCustom8">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Taslak Halinde Yeniden yüklemeye İzin Ver</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom9" type="radio" value="option1" name="e" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom9">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom10" type="radio" value="option2" name="e" class="form-control-custom radio-custom">
+                        <label for="radioCustom10">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Maksimum Taslak Düzenleme</label>
+                    <div class="col-sm-10">
+                      <input type="number" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Etiket Ekle</label>
+                    <div class="col-sm-10">
+                      <div class="form-group multiple-form-group input-group">
+                        <input type="text" name="tags['value'][]" class="form-control">
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-info btn-add">
+                            <i class="fa fa-plus fa-fw"></i>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="h5 display">Bildirimler</h2>
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Öğretmenleri Yüklemeler Hakkında Uyar</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom11" type="radio" value="option1" name="f" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom11">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom12" type="radio" value="option2" name="f" class="form-control-custom radio-custom">
+                        <label for="radioCustom12">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Öğretmenleri Son Yükleme Tarihleri İle İlgili Uyar</label>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom13" type="radio" value="option1" name="g" class="form-control-custom radio-custom" checked>
+                        <label for="radioCustom13">Evet</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="i-checks">
+                        <input id="radioCustom14" type="radio" value="option2" name="g" class="form-control-custom radio-custom">
+                        <label for="radioCustom14">Hayır</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 offset-sm-2">
+                      <button type="submit" class="btn btn-danger">İptal</button>
+                      <button type="submit" class="btn btn-info">Kaydet</button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -865,6 +842,175 @@
   <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/front.js"></script>
 
+  <script src="//cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+
+  <script src="js/moment-with-locales.min.js"></script>
+
+  <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.tr.js"></script>
+  <script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+  <script>
+    // rubric dynamic table
+    function appendColumn() {
+      var tbl = document.getElementById('my-table'), i;
+      for (i = 0; i < tbl.rows.length; i++) {
+        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
+      }
+    }
+    function appendRow() {
+      var tbl = document.getElementById('my-table'),
+        row = tbl.insertRow(tbl.rows.length), i;
+      for (i = 0; i < tbl.rows[0].cells.length; i++) {
+        if (i === 0) {
+          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
+        } else if (i === 1) {
+          createCell(row.insertCell(i), 'form-control border-0', '');
+        } else {
+          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
+
+        }
+      }
+    }
+    function createCell(cell, style, attr) {
+      var input = document.createElement('input');
+      input.setAttribute('class', style);
+      input.setAttribute('placeholder', attr);
+      cell.appendChild(input);
+    }
+    function createBtnCell(cell, style) {
+      var btn = document.createElement('button');
+      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
+      btn.setAttribute('class', style);
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('onclick', 'deleteRow(this)');
+      cell.appendChild(btn);
+    }
+    function deleteRow(row) {
+      var tbl = document.getElementById('my-table');
+      var tblRow = row.parentElement.parentElement;
+      tbl.deleteRow(tblRow.rowIndex);
+    }
+    function deleteColumn() {
+      var allRows = document.getElementById('my-table').rows;
+      for (var i = 0; i < allRows.length; i++) {
+        if (allRows[i].cells.length > 1) {
+          allRows[i].deleteCell(-1);
+        }
+      }
+    }
+  </script>
+
+  <script>
+    // marking guide dynamic table
+    function appendColumn2() {
+      var tbl = document.getElementById('my-table-2'), i;
+      for (i = 0; i < tbl.rows.length; i++) {
+        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
+      }
+    }
+    function appendRow2() {
+      var tbl = document.getElementById('my-table-2'),
+        row = tbl.insertRow(tbl.rows.length), i;
+      for (i = 0; i < tbl.rows[0].cells.length; i++) {
+        if (i === 0) {
+          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
+        } else if (i === 1) {
+          createCell(row.insertCell(i), 'form-control border-0', '');
+        } else {
+          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
+
+        }
+      }
+    }
+    function createCell(cell, style, attr) {
+      var input = document.createElement('input');
+      input.setAttribute('class', style);
+      input.setAttribute('placeholder', attr);
+      cell.appendChild(input);
+    }
+    function createBtnCell(cell, style) {
+      var btn = document.createElement('button');
+      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
+      btn.setAttribute('class', style);
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('onclick', 'deleteRow(this)');
+      cell.appendChild(btn);
+    }
+    function deleteRow2(row) {
+      var tbl = document.getElementById('my-table-2');
+      var tblRow = row.parentElement.parentElement;
+      tbl.deleteRow(tblRow.rowIndex);
+    }
+    function deleteColumn2() {
+      var allRows = document.getElementById('my-table-2').rows;
+      for (var i = 0; i < allRows.length; i++) {
+        if (allRows[i].cells.length > 1) {
+          allRows[i].deleteCell(-1);
+        }
+      }
+    }
+  </script>
+
+
+
+
+  <script>
+
+    CKEDITOR.replace('my-editor');
+    CKEDITOR.replace('my-editor-2');
+    CKEDITOR.replace('my-editor-3');
+
+    // homework add tag
+
+    (function ($) {
+
+      var addFormGroup = function (event) {
+        event.preventDefault();
+
+        var $formGroup = $(this).closest('.form-group');
+        var $multipleFormGroup = $formGroup.closest('.multiple-form-group');
+        var $formGroupClone = $formGroup.clone();
+
+        $(this)
+          .toggleClass('btn-success btn-add btn-danger btn-remove')
+          .html('<i class="fa fa-minus fa-fw"></i>');
+
+        $formGroupClone.find('input').val('');
+        $formGroupClone.insertAfter($formGroup);
+
+        var $lastFormGroupLast = $multipleFormGroup.find('.form-group:last');
+        if ($multipleFormGroup.data('max') <= countFormGroup($multipleFormGroup)) {
+          $lastFormGroupLast.find('.btn-add').attr('disabled', true);
+        }
+      };
+
+      var removeFormGroup = function (event) {
+        event.preventDefault();
+
+        var $formGroup = $(this).closest('.form-group');
+        var $multipleFormGroup = $formGroup.closest('.multiple-form-group');
+
+        var $lastFormGroupLast = $multipleFormGroup.find('.form-group:last');
+        if ($multipleFormGroup.data('max') >= countFormGroup($multipleFormGroup)) {
+          $lastFormGroupLast.find('.btn-add').attr('disabled', false);
+        }
+
+        $formGroup.remove();
+      };
+
+      var countFormGroup = function ($form) {
+        return $form.find('.form-group').length;
+      };
+
+      $(document).on('click', '.btn-add', addFormGroup);
+      $(document).on('click', '.btn-remove', removeFormGroup);
+
+    })(jQuery);
+
+
+  </script>
 </body>
 
 </html>

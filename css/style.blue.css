@@ -2419,9 +2419,9 @@ a.text-primary:focus, a.text-primary:hover {
 }
 
 .page-item.active .page-link {
-  color: #fff;
-  background-color: #00529B;
-  border-color: #00529B;
+  color: #fff !important;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
 
 .page-item.disabled .page-link {
@@ -2433,13 +2433,13 @@ a.text-primary:focus, a.text-primary:hover {
 .page-link {
   padding: 0.5rem 0.75rem;
   line-height: 1.25;
-  color: #00529B;
+  color: #17a2b8;
   background-color: #fff;
   border: 1px solid #ddd;
 }
 
 .page-link:focus, .page-link:hover {
-  color: #1c669c;
+  color: #17a2b8;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #ddd;

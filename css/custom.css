@@ -322,7 +322,7 @@ header h1 button {
 	border-bottom-color: #cfd6db;
 }
 /*accordion-menu*/
-/* homework criterion */
+/* homework */
 .criterion-table input:focus{
 	box-shadow: none !important;
 }
@@ -339,4 +339,15 @@ header h1 button {
 		max-width: 1000px;
 	}
 }
-/* homework criterion */
+#homeworkAccordion .card-header {
+	background-color: #eceff1;
+	border-bottom-color: #cfd6db;
+	height: auto;
+}
+.homework-accordion table img{
+	width: 35px;
+}
+.homework-accordion table td{
+	vertical-align: middle;
+}
+/* homework */
