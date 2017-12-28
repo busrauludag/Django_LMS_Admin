@@ -647,10 +647,49 @@
                 <textarea name="my-editor-2"></textarea>
               </div>
             </div>
+            <div class="form-group row mb-5">
+              <div class="col-sm-12">
+                <div class="h3 float-left">Kriterler</div>
+                <div class="btn-group float-right" role="group">
+                  <button type="button" class="btn btn-info btn-sm" onclick="appendColumn()">
+                    <i class="fa fa-plus"></i> Ekle
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm" onclick="deleteColumn()">
+                    <i class="fa fa-minus"></i> Sil
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <table class="table table-bordered criterion-table" id="my-table">
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                      <td>
+                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-sm-12">
+                <button type="button" class="btn btn-info btn-sm" onclick="appendRow()">
+                  <i class="fa fa-plus"></i> Kriter Ekle
+                </button>
+              </div>
+            </div>
             <h2 class="h5 display">Rubric Ayarları</h2>
             <div class="line"></div>
             <div class="form-group row">
-              <label class="col-sm- form-control-label">Öğrenci notlandırılmadan önce rubriği görebilsin</label>
+              <label class="col-sm-4 form-control-label">Öğrenci notlandırılmadan önce rubriği görebilsin</label>
               <div class="col-sm-2">
                 <div class="i-checks">
                   <input id="radioCustom15" type="radio" value="option1" name="h" class="form-control-custom radio-custom" checked>
@@ -665,7 +704,7 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm- form-control-label">Öğrenci notlandırmadan sonra rubriği görebilsin</label>
+              <label class="col-sm-4 form-control-label">Öğrenci notlandırmadan sonra rubriği görebilsin</label>
               <div class="col-sm-2">
                 <div class="i-checks">
                   <input id="radioCustom17" type="radio" value="option1" name="i" class="form-control-custom radio-custom" checked>
@@ -680,7 +719,7 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm- form-control-label">Öğretmen her bir kriter için yorum yapabilsin</label>
+              <label class="col-sm-4 form-control-label">Öğretmen her bir kriter için yorum yapabilsin</label>
               <div class="col-sm-2">
                 <div class="i-checks">
                   <input id="radioCustom19" type="radio" value="option1" name="j" class="form-control-custom radio-custom" checked>
@@ -694,6 +733,7 @@
                 </div>
               </div>
             </div>
+            <hr>
             <div class="form-group row">
               <div class="col-sm-10 offset-sm-2 text-right">
                 <button type="submit" class="btn btn-danger">İptal</button>
@@ -730,33 +770,28 @@
                 <textarea name="my-editor-3"></textarea>
               </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mb-5">
               <div class="col-sm-12">
-                <div class="h2 float-left">Kriterler</div>
-                <button type="button" class="btn btn-info btn-sm float-right" onclick="appendColumn()">
-                  <i class="fa fa-plus"></i> Seviye Ekle
-                </button>
+                <div class="h4 float-left">Kriterler</div>
+                <div class="btn-group float-right" role="group">
+                  <button type="button" class="btn btn-info btn-sm" onclick="appendColumn2()">
+                    <i class="fa fa-plus"></i> Ekle
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm" onclick="deleteColumn2()">
+                    <i class="fa fa-minus"></i> Sil
+                  </button>
+                </div>
               </div>
               <div class="col-sm-12">
-                <table class="table table-bordered criterion-table" id="my-table">
+                <table class="table table-bordered criterion-table" id="my-table-2">
                   <tbody>
                     <tr>
-                      <td>
-                        <!-- <button type="button" onclick="deleteRow(this)" class="btn btn-danger btn-sm">
-                          <i class="fa fa-minus fa-fw"></i>
-                        </button> -->
-                      </td>
+                      <td></td>
                       <td>
                         <input type="text" name="password" class="form-control border-0">
-                        <button type="button" onclick="deleteColumn(this)" class="btn btn-danger btn-sm">
-                          <i class="fa fa-minus fa-fw"></i>
-                        </button>
                       </td>
                       <td>
                         <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                        <button type="button" onclick="deleteColumn(this)" class="btn btn-danger btn-sm">
-                          <i class="fa fa-minus fa-fw"></i>
-                        </button>
                       </td>
                       <td>
                         <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
@@ -769,9 +804,22 @@
                 </table>
               </div>
               <div class="col-sm-12">
-                <button type="button" class="btn btn-info btn-sm" onclick="appendRow()">
+                <button type="button" class="btn btn-info btn-sm" onclick="appendRow2()">
                   <i class="fa fa-plus"></i> Kriter Ekle
                 </button>
+              </div>
+            </div>
+            <div class="form-group row mb-5">
+              <label class="col-sm-2 form-control-label">Öğrenci İçin Yapılan Yorumlar</label>
+              <div class="col-sm-10">
+                <textarea rows="4" class="form-control" placeholder="Yorumunuz" style="resize: none;"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+              <div class="col-sm-10 offset-sm-2 text-right">
+                <button type="submit" class="btn btn-danger">İptal</button>
+                <button type="submit" class="btn btn-info">Kaydet</button>
               </div>
             </div>
           </form>
@@ -801,19 +849,19 @@
 
 
   <script>
+    // rubric dynamic table
     function appendColumn() {
       var tbl = document.getElementById('my-table'), i;
       for (i = 0; i < tbl.rows.length; i++) {
         createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
       }
     }
-
     function appendRow() {
       var tbl = document.getElementById('my-table'),
         row = tbl.insertRow(tbl.rows.length), i;
       for (i = 0; i < tbl.rows[0].cells.length; i++) {
         if (i === 0) {
-          createBtnCell(row.insertCell(i), 'btn btn-danger btn-xs mt-2');
+          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
         } else if (i === 1) {
           createCell(row.insertCell(i), 'form-control border-0', '');
         } else {
@@ -822,14 +870,12 @@
         }
       }
     }
-
     function createCell(cell, style, attr) {
       var input = document.createElement('input');
       input.setAttribute('class', style);
       input.setAttribute('placeholder', attr);
       cell.appendChild(input);
     }
-
     function createBtnCell(cell, style) {
       var btn = document.createElement('button');
       btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
@@ -838,17 +884,69 @@
       btn.setAttribute('onclick', 'deleteRow(this)');
       cell.appendChild(btn);
     }
-
     function deleteRow(row) {
       var tbl = document.getElementById('my-table');
       var tblRow = row.parentElement.parentElement;
       tbl.deleteRow(tblRow.rowIndex);
     }
+    function deleteColumn() {
+      var allRows = document.getElementById('my-table').rows;
+      for (var i = 0; i < allRows.length; i++) {
+        if (allRows[i].cells.length > 1) {
+          allRows[i].deleteCell(-1);
+        }
+      }
+    }
+  </script>
 
-    function deleteColumn(col) {
-      var tbl = document.getElementById('my-table');
-      var tblCol = col.parentElement.parentElement;
+  <script>
+    // marking guide dynamic table
+    function appendColumn2() {
+      var tbl = document.getElementById('my-table-2'), i;
+      for (i = 0; i < tbl.rows.length; i++) {
+        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
+      }
+    }
+    function appendRow2() {
+      var tbl = document.getElementById('my-table-2'),
+        row = tbl.insertRow(tbl.rows.length), i;
+      for (i = 0; i < tbl.rows[0].cells.length; i++) {
+        if (i === 0) {
+          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
+        } else if (i === 1) {
+          createCell(row.insertCell(i), 'form-control border-0', '');
+        } else {
+          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
+
+        }
+      }
+    }
+    function createCell(cell, style, attr) {
+      var input = document.createElement('input');
+      input.setAttribute('class', style);
+      input.setAttribute('placeholder', attr);
+      cell.appendChild(input);
+    }
+    function createBtnCell(cell, style) {
+      var btn = document.createElement('button');
+      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
+      btn.setAttribute('class', style);
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('onclick', 'deleteRow(this)');
+      cell.appendChild(btn);
+    }
+    function deleteRow(row) {
+      var tbl = document.getElementById('my-table-2');
+      var tblRow = row.parentElement.parentElement;
       tbl.deleteRow(tblRow.rowIndex);
+    }
+    function deleteColumn2() {
+      var allRows = document.getElementById('my-table-2').rows;
+      for (var i = 0; i < allRows.length; i++) {
+        if (allRows[i].cells.length > 1) {
+          allRows[i].deleteCell(-1);
+        }
+      }
     }
   </script>
 

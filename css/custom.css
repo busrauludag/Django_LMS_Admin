@@ -329,6 +329,11 @@ header h1 button {
 .criterion-table td{
 	padding: 0 !important;
 }
+.criterion-table .btn-danger{
+	width: 100%;
+	margin-top: 5px;
+	padding: 0.1rem 0.2rem;
+}
 @media (min-width: 1100px){
 	.modal-lg {
 		max-width: 1000px;
