@@ -380,7 +380,7 @@
                   <div class="line"></div>
                   <div class="mb-5">
                     <div class="h3 float-left">Kriterler</div>
-                    <table class="table table-bordered point-table" id="my-point-table">
+                    <table class="table table-bordered table-responsive-sm point-table" id="my-point-table">
                       <tbody>
                         <tr>
                           <td class="font-weight-bold">
@@ -445,6 +445,69 @@
                     </div>
                   </div>
                 </form>
+                <!-- Rubrik Notlandırma -->
+                <form class="form-horizontal forms">
+                  <h2 class="h5 display">Notlandırma (Marking Guide)</h2>
+                  <div class="line"></div>
+                  <div class="mb-5">
+                    <div class="h3 float-left">Kriterler</div>
+                    <table class="table table-bordered table-responsive-sm point-table">
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold">
+                            Yazılar Okunaklıydı
+                          </td>
+                          <td value="0">
+                            <strong>Kriter Açıklaması:</strong>
+                            <br> Lorem ipsum dolor sit amet, consec- tetur adipiscing elit. Aliquam eget consectetur risus.
+                          </td>
+                          <td value="1">
+                            <strong>Öğrenciye Yapılan Açıklama:</strong>
+                            <br> Lorem ipsum dolor sit amet, consec- tetur adipiscing elit. Aliquam eget consectetur risus.
+                          </td>
+                          <td width="11%">
+                            <input type="text" class="form-control form-control-sm float-md-left float-none text-right p-0 p-md-2">
+                            <div class="float-md-right float-none text-center mt-1 h3">
+                              <strong>/ 10</strong>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">
+                            Renkler Uyumluydu
+                          </td>
+                          <td value="0">
+                            <strong>Kriter Açıklaması:</strong>
+                            <br> Lorem ipsum dolor sit amet, consec- tetur adipiscing elit. Aliquam eget consectetur risus.
+                          </td>
+                          <td value="1">
+                            <strong>Öğrenciye Yapılan Açıklama:</strong>
+                            <br> Lorem ipsum dolor sit amet, consec- tetur adipiscing elit. Aliquam eget consectetur risus.
+                          </td>
+                          <td width="11%">
+                            <input type="text" class="form-control form-control-sm float-md-left float-none text-right p-0 p-md-2">
+                            <div class="float-md-right float-none text-center mt-1 h3">
+                              <strong>/ 10</strong>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Dönüt</label>
+                    <div class="col-sm-10">
+                      <textarea name="my-editor-3"></textarea>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-group row">
+                    <div class="col-sm-10 offset-sm-2 text-right">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">İptal</button>
+                      <button type="submit" class="btn btn-info">Kaydet</button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -483,6 +546,7 @@
   <script>
     CKEDITOR.replace('my-editor');
     CKEDITOR.replace('my-editor-2');
+    CKEDITOR.replace('my-editor-3');
   </script>
 
   <script>

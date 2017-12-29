@@ -405,6 +405,12 @@ header h1 button {
 .point-table td{
 	vertical-align: middle;
 }
+@media screen and (min-width:768px){
+	.point-table input{
+		width: 50%;
+	}
+}
+
 .selectable-cell{
 	cursor: pointer;
 }
