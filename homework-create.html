@@ -776,14 +776,14 @@
             <div class="form-group row mb-5">
               <div class="col-sm-12">
                 <div class="h4 float-left">Kriterler</div>
-                <div class="btn-group float-right" role="group">
+                <!-- <div class="btn-group float-right" role="group">
                   <button type="button" class="btn btn-info btn-sm" onclick="appendColumn2()">
                     <i class="fa fa-plus"></i> Ekle
                   </button>
                   <button type="button" class="btn btn-danger btn-sm" onclick="deleteColumn2()">
                     <i class="fa fa-minus"></i> Sil
                   </button>
-                </div>
+                </div> -->
               </div>
               <div class="col-sm-12">
                 <table class="table table-responsive table-bordered criterion-table" id="my-table-2">
@@ -794,13 +794,13 @@
                         <input type="text" name="password" class="form-control border-0">
                       </td>
                       <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                        <input type="text" name="password" class="form-control border-0" placeholder="Kriter Açıklaması">
                       </td>
                       <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                        <input type="text" name="password" class="form-control border-0" placeholder="Öğrenciye Yapılacak Açıklama">
                       </td>
                       <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
+                        <input type="text" name="password" class="form-control border-0" placeholder="Maksimum Skor">
                       </td>
                     </tr>
                   </tbody>
@@ -904,38 +904,41 @@
 
   <script>
     // marking guide dynamic table
-    function appendColumn2() {
-      var tbl = document.getElementById('my-table-2'), i;
-      for (i = 0; i < tbl.rows.length; i++) {
-        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
-      }
-    }
+    // function appendColumn2() {
+    //   var tbl = document.getElementById('my-table-2'), i;
+    //   for (i = 0; i < tbl.rows.length; i++) {
+    //     createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
+    //   }
+    // }
     function appendRow2() {
       var tbl = document.getElementById('my-table-2'),
         row = tbl.insertRow(tbl.rows.length), i;
       for (i = 0; i < tbl.rows[0].cells.length; i++) {
         if (i === 0) {
-          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
+          createBtnCell2(row.insertCell(i), 'btn btn-danger btn-sm');
         } else if (i === 1) {
-          createCell(row.insertCell(i), 'form-control border-0', '');
-        } else {
-          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
-
+          createCell2(row.insertCell(i), 'form-control border-0', '');
+        } else if (i === 2){
+          createCell2(row.insertCell(i), 'form-control border-0', 'Kriter Açıklaması');
+        } else if (i === 3){
+          createCell2(row.insertCell(i), 'form-control border-0', 'Öğrenciye Yapılacak Açıklama');
+        }else {
+          createCell2(row.insertCell(i), 'form-control border-0', 'Maksimum Skor');
         }
       }
     }
-    function createCell(cell, style, attr) {
+    function createCell2(cell, style, attr) {
       var input = document.createElement('input');
       input.setAttribute('class', style);
       input.setAttribute('placeholder', attr);
       cell.appendChild(input);
     }
-    function createBtnCell(cell, style) {
+    function createBtnCell2(cell, style) {
       var btn = document.createElement('button');
       btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
       btn.setAttribute('class', style);
       btn.setAttribute('type', 'button');
-      btn.setAttribute('onclick', 'deleteRow(this)');
+      btn.setAttribute('onclick', 'deleteRow2(this)');
       cell.appendChild(btn);
     }
     function deleteRow2(row) {
@@ -943,27 +946,23 @@
       var tblRow = row.parentElement.parentElement;
       tbl.deleteRow(tblRow.rowIndex);
     }
-    function deleteColumn2() {
-      var allRows = document.getElementById('my-table-2').rows;
-      for (var i = 0; i < allRows.length; i++) {
-        if (allRows[i].cells.length > 1) {
-          allRows[i].deleteCell(-1);
-        }
-      }
-    }
+    // function deleteColumn2() {
+    //   var allRows = document.getElementById('my-table-2').rows;
+    //   for (var i = 0; i < allRows.length; i++) {
+    //     if (allRows[i].cells.length > 1) {
+    //       allRows[i].deleteCell(-1);
+    //     }
+    //   }
+    // }
   </script>
 
 
-
-
   <script>
-
     CKEDITOR.replace('my-editor');
     CKEDITOR.replace('my-editor-2');
     CKEDITOR.replace('my-editor-3');
 
     // homework add tag
-
     (function ($) {
 
       var addFormGroup = function (event) {
