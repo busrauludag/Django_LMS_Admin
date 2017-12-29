@@ -904,12 +904,6 @@
 
   <script>
     // marking guide dynamic table
-    // function appendColumn2() {
-    //   var tbl = document.getElementById('my-table-2'), i;
-    //   for (i = 0; i < tbl.rows.length; i++) {
-    //     createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
-    //   }
-    // }
     function appendRow2() {
       var tbl = document.getElementById('my-table-2'),
         row = tbl.insertRow(tbl.rows.length), i;
@@ -946,14 +940,6 @@
       var tblRow = row.parentElement.parentElement;
       tbl.deleteRow(tblRow.rowIndex);
     }
-    // function deleteColumn2() {
-    //   var allRows = document.getElementById('my-table-2').rows;
-    //   for (var i = 0; i < allRows.length; i++) {
-    //     if (allRows[i].cells.length > 1) {
-    //       allRows[i].deleteCell(-1);
-    //     }
-    //   }
-    // }
   </script>
 
 
