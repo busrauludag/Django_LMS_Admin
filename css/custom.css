@@ -376,10 +376,15 @@ header h1 button {
 		margin-top: 10rem;
 	}
 }
-#student-profile-card h5{
+#student-profile-card li > h5{
 	max-width: 100px;
 	word-wrap: break-word;
 	line-height: 1.5;
+}
+#student-profile-card h5{
+	max-width: 140px;
+	word-wrap: break-word;
+	line-height: 2.5;
 }
 #student-profile-card ul li{
 	vertical-align: middle;
@@ -422,3 +427,6 @@ header h1 button {
 	color: #fff !important;
 }
 /* homework */
+/* project */
+
+/* project */
