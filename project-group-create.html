@@ -30,7 +30,6 @@
   <link rel="stylesheet" href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
   <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-fileupload/css/fileinput.min.css">
-  <link rel="stylesheet" href="vendor/dropzone/css/dropzone.min.css">
 
 </head>
 
@@ -293,21 +292,18 @@
           <li class="breadcrumb-item">
             <a href="homeworks.html">Projeler</a>
           </li>
-          <li class="breadcrumb-item active">Proje Ekle</li>
+          <li class="breadcrumb-item">
+            <a href="project-detail.html">Proje Adı</a>
+          </li>
+          <li class="breadcrumb-item active">Grup Oluştur</li>
         </ul>
       </div>
     </div>
     <section>
       <div class="container-fluid">
         <header>
-          <h1 class="h3 display">Proje Ekle</h1>
+          <h1 class="h3 display">Grup Oluştur</h1>
         </header>
-        <div class="alert alert-info rounded-0" role="alert">
-          <p class="m-0 text-secondary">
-            Proje grubu oluşturmak için
-            <a href="project-group-create.html" class="text-dark font-weight-bold">tıklayınız.</a>
-          </p>
-        </div>
         <div class="row">
           <div class="col-lg-12 mb-3">
             <div class="card">
@@ -315,112 +311,97 @@
                 <form class="form-horizontal forms">
                   <h2 class="h5 display">Genel</h2>
                   <div class="line"></div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Ödev Adı</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
+                  <div class="card homework-detail-card border mb-5">
+                    <div class="card-body">
+                      <dl class="row">
+                        <dt class="col-4 col-sm-2 text-right text-secondary">
+                          Ödev Adı
+                        </dt>
+                        <dd class="col-8 col-sm-10">
+                          Ödev Başlığı
+                        </dd>
+                        <dt class="col-4 col-sm-2 text-right text-secondary">
+                          Ders
+                        </dt>
+                        <dd class="col-8 col-sm-10">
+                          Atatürk İlkeleri ve İnkılap Tarihi
+                        </dd>
+                        <dt class="col-4 col-sm-2 text-right text-secondary">
+                          Verildiği Tarih
+                        </dt>
+                        <dd class="col-8 col-sm-10">10/12/2017</dd>
+                        <dt class="col-4 col-sm-2 text-right text-secondary">
+                          Son Teslim Tarihi
+                        </dt>
+                        <dd class="col-8 col-sm-10">
+                          20/01/2018
+                        </dd>
+                        <dt class="col-4 col-sm-2 text-right text-secondary">
+                          Açıklama
+                        </dt>
+                        <dd class="col-8 col-sm-10">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget consectetur risus. Integer at ex pretium, vulputate
+                          dui et, consequat mi. Phasellus lorem diam, commodo vel maximus vel, placerat vitae dolor. Curabitur
+                          ipsum eros, pulvinar quis arcu id, ornare varius libero.
+                        </dd>
+                      </dl>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Ödev Açıklaması</label>
-                    <div class="col-sm-10">
-                      <textarea name="my-editor"></textarea>
+                    <label class="col-sm-2 form-control-label">Grup Oluşturma Yöntemi</label>
+                    <div class="col-sm-10 select">
+                      <select name="groupMethod" class="form-control group-method">
+                        <option value="">Seçiniz..</option>
+                        <option value="manuel">Manuel</option>
+                        <option value="random">Rastgele</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Ödevin Kaç Üzerinden Değerlendirileceği</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row percent">
-                    <label class="col-sm-2 form-control-label">Ödevin Genel Ortalama Değeri</label>
-                    <div class="col-sm-10">
-                      <i class="fa fa-percent fa-fw"></i>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row percent">
-                    <label class="col-sm-2 form-control-label">Eğitmenin Bireysel Puanlaması</label>
-                    <div class="col-sm-10">
-                      <i class="fa fa-percent fa-fw"></i>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row percent">
-                    <label class="col-sm-2 form-control-label">Eğitmenin Grup Puanlaması</label>
-                    <div class="col-sm-10">
-                      <i class="fa fa-percent fa-fw"></i>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row percent">
-                    <label class="col-sm-2 form-control-label">Öğrencilerin Grupiçi Puanaması</label>
-                    <div class="col-sm-10">
-                      <i class="fa fa-percent fa-fw"></i>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row percent">
-                    <label class="col-sm-2 form-control-label">Öğrencilerin Diğer Grupları Puanlaması</label>
-                    <div class="col-sm-10">
-                      <i class="fa fa-percent fa-fw"></i>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Projeye Başlama Tarihi</label>
-                    <div class="col-sm-10">
-                      <div class="input-group date datetime-picker">
-                        <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                        </span>
-                        <input type="text" class="form-control" name="datetime">
+
+                  <div class="form-group row my-5" id="selectManuelField">
+                    <div class="col-sm-10 offset-sm-2">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <label class="form-control-label">
+                            <strong>Grup Adı:</strong> Group Name</label>
+                          <select name="from[]" id="multiselect" class="form-control multiple-select" size="8" multiple="multiple">
+                            <option value="1">Ahmet YILDIZ</option>
+                            <option value="2">Ahmet YILDIZ</option>
+                            <option value="3">Ahmet YILDIZ</option>
+                            <option value="4">Ahmet YILDIZ</option>
+                            <option value="5">Ahmet YILDIZ</option>
+                            <option value="6">Ahmet YILDIZ</option>
+                            <option value="7">Ahmet YILDIZ</option>
+                            <option value="8">Ahmet YILDIZ</option>
+                            <option value="9">Ahmet YILDIZ</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-2 mt-4">
+                          <button type="button" id="multiselect_rightAll" class="btn btn-block">
+                            <i class="fa fa-forward"></i>
+                          </button>
+                          <button type="button" id="multiselect_rightSelected" class="btn btn-block">
+                            <i class="fa fa-chevron-right"></i>
+                          </button>
+                          <button type="button" id="multiselect_leftSelected" class="btn btn-block">
+                            <i class="fa fa-chevron-left"></i>
+                          </button>
+                          <button type="button" id="multiselect_leftAll" class="btn btn-block">
+                            <i class="fa fa-backward"></i>
+                          </button>
+                        </div>
+                        <div class="col-sm-5">
+                          <label class="form-control-label">Seçilen Öğrenciler</label>
+                          <select name="to[]" id="multiselect_to" class="form-control" size="8" multiple="multiple"></select>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Proje Bitiş Tarihi</label>
-                    <div class="col-sm-10">
-                      <div class="input-group date datetime-picker">
-                        <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                        </span>
-                        <input type="text" class="form-control" name="datetime">
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Kilometre Taşı Oluşturma</h2>
-                  <div class="line"></div>
-                  <div class="form-group row mb-5">
-                    <div class="col-sm-12">
-                      <table class="table table-responsive table-bordered criterion-table" id="my-table-2">
-                        <tbody>
-                          <tr>
-                            <td></td>
-                            <td>
-                              <input type="text" name="password" class="form-control border-0" placeholder="Kilometre Taşı Başlığı">
-                            </td>
-                            <td>
-                              <input type="text" name="password" class="form-control border-0" placeholder="Kilometre Taşı Açıklaması">
-                            </td>
-                            <td>
-                              <input type="text" name="password" class="form-control border-0" placeholder="Son Teslim Tarihi">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="col-sm-12">
-                      <button type="button" class="btn btn-outline-info btn-sm" onclick="appendRow2()">
-                        <i class="fa fa-plus"></i> Kilometre Taşı Ekle
-                      </button>
-                    </div>
-                  </div>
+
                   <div class="form-group row">
-                    <div class="col-sm-4 offset-sm-2">
-                      <button type="button" class="btn btn-danger">İptal</button>
-                      <button type="button" class="btn btn-info" onclick="showSweetAlert()">Kaydet</button>
+                    <div class="col-sm-10 offset-sm-2 text-right">
+                      <button type="submit" class="btn btn-danger">İptal</button>
+                      <button type="submit" class="btn btn-info">Kaydet</button>
                     </div>
                   </div>
                 </form>
@@ -446,80 +427,6 @@
     </footer>
   </div>
 
-  <!-- Project Group Modal-->
-  <div id="projectGroupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
-    <div role="document" class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 id="exampleModalLabel" class="modal-title">Marking Guide Modal</h5>
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form class="form-horizontal forms">
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Adı</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row mb-5">
-              <label class="col-sm-2 form-control-label">Açıklama</label>
-              <div class="col-sm-10">
-                <textarea name="my-editor-3"></textarea>
-              </div>
-            </div>
-            <div class="form-group row mb-5">
-              <div class="col-sm-12">
-                <div class="h4 float-left">Kriterler</div>
-              </div>
-              <div class="col-sm-12">
-                <table class="table table-responsive table-bordered criterion-table" id="my-table-2">
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Kriter Açıklaması">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Öğrenciye Yapılacak Açıklama">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Maksimum Skor">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-sm-12">
-                <button type="button" class="btn btn-info btn-sm" onclick="appendRow2()">
-                  <i class="fa fa-plus"></i> Kriter Ekle
-                </button>
-              </div>
-            </div>
-            <div class="form-group row mb-5">
-              <label class="col-sm-2 form-control-label">Öğrenci İçin Yapılan Yorumlar</label>
-              <div class="col-sm-10">
-                <textarea rows="4" class="form-control" placeholder="Yorumunuz" style="resize: none;"></textarea>
-              </div>
-            </div>
-            <hr>
-            <div class="form-group row">
-              <div class="col-sm-10 offset-sm-2 text-right">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">İptal</button>
-                <button type="submit" class="btn btn-info">Kaydet</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <!-- Javascript files-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -540,81 +447,22 @@
   <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.tr.js"></script>
   <script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
   <script>
-    // milestones create dynamic table
-    function appendRow2() {
-      var tbl = document.getElementById('my-table-2'),
-        row = tbl.insertRow(tbl.rows.length), i;
-      for (i = 0; i < tbl.rows[0].cells.length; i++) {
-        if (i === 0) {
-          createBtnCell2(row.insertCell(i), 'btn btn-danger btn-sm');
-        } else if (i === 1) {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Kilometre Taşı Başlığı');
-        } else if (i === 2) {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Kilometre Taşı Açıklaması');
-        } else {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Son Teslim Tarihi');
-        }
-      }
-    }
-    function createCell2(cell, style, attr) {
-      var input = document.createElement('input');
-      input.setAttribute('class', style);
-      input.setAttribute('placeholder', attr);
-      cell.appendChild(input);
-    }
-
-    // function createDateCell2(cell, style, attr) {
-    //   var inputGrp = document.createElement('div');
-    //   inputGrp.setAttribute('class', style);
-    //   cell.appendChild(inputGrp);
-    //   var span = document.createElement('span');
-    //   input.setAttribute('placeholder', attr);
-    // }
-
-    // <div class="input-group date datetime-picker">
-    //   <span class="input-group-addon">
-    //     <span class="fa fa-calendar"></span>
-    //   </span>
-    //   <input type="text" class="form-control" name="datetime">
-    // </div>
-
-    function createBtnCell2(cell, style) {
-      var btn = document.createElement('button');
-      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
-      btn.setAttribute('class', style);
-      btn.setAttribute('type', 'button');
-      btn.setAttribute('onclick', 'deleteRow2(this)');
-      cell.appendChild(btn);
-    }
-    function deleteRow2(row) {
-      var tbl = document.getElementById('my-table-2');
-      var tblRow = row.parentElement.parentElement;
-      tbl.deleteRow(tblRow.rowIndex);
-    }
-  </script>
-
-  <script>
-    CKEDITOR.replace('my-editor');
-    CKEDITOR.replace('my-editor-2');
-    CKEDITOR.replace('my-editor-3');
     $('.multiple-select').multiselect();
+
+    // show hide elements 
+    var selectMethod = $('.group-method');
+    $('#selectManuelField').hide();
+    selectMethod.change(function () {
+      if ($(this).val() == 'manuel') {
+        $('#selectManuelField').show();
+      }
+      else{
+        $('#selectManuelField').hide();
+      }
+    });
   </script>
 
-  <script>
-    // save button show alert
-    function showSweetAlert() {
-      swal({
-        title: "İşlem Başarılı!",
-        text: "Şimdi de proje gruplarınızı oluşturmalısınız!",
-        icon: "success",
-        button: "Tamam",
-      });
-    }
-  </script>
 </body>
 
 </html>
