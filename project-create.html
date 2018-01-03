@@ -291,9 +291,9 @@
             <a href="index.html">Anasayfa</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="homeworks.html">Ödevler</a>
+            <a href="homeworks.html">Projeler</a>
           </li>
-          <li class="breadcrumb-item active">Ödev Ekle</li>
+          <li class="breadcrumb-item active">Proje Ekle</li>
         </ul>
       </div>
     </div>
@@ -305,7 +305,7 @@
         <div class="alert alert-info rounded-0" role="alert">
           <p class="m-0 text-secondary">
             Proje grubu oluşturmak için
-            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#markingGuideModal">tıklayınız.</a>
+            <a href="" class="text-dark font-weight-bold" data-toggle="modal" data-target="#projectGroupModal">tıklayınız.</a>
           </p>
         </div>
         <div class="row">
@@ -322,21 +322,54 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Açıklama</label>
+                    <label class="col-sm-2 form-control-label">Ödev Açıklaması</label>
                     <div class="col-sm-10">
                       <textarea name="my-editor"></textarea>
                     </div>
                   </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Ödevin İlişkili Olduğu Konu</label>
+                  <div class="form-group row">
+                    <label class="col-sm-2 form-control-label">Ödevin Kaç Üzerinden Değerlendirileceği</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  <h2 class="h5 display">Erişilebilirlik</h2>
-                  <div class="line"></div>
+                  <div class="form-group row percent">
+                    <label class="col-sm-2 form-control-label">Ödevin Genel Ortalama Değeri</label>
+                    <div class="col-sm-10">
+                      <i class="fa fa-percent fa-fw"></i>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row percent">
+                    <label class="col-sm-2 form-control-label">Eğitmenin Bireysel Puanlaması</label>
+                    <div class="col-sm-10">
+                      <i class="fa fa-percent fa-fw"></i>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row percent">
+                    <label class="col-sm-2 form-control-label">Eğitmenin Grup Puanlaması</label>
+                    <div class="col-sm-10">
+                      <i class="fa fa-percent fa-fw"></i>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row percent">
+                    <label class="col-sm-2 form-control-label">Öğrencilerin Grupiçi Puanaması</label>
+                    <div class="col-sm-10">
+                      <i class="fa fa-percent fa-fw"></i>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row percent">
+                    <label class="col-sm-2 form-control-label">Öğrencilerin Diğer Grupları Puanlaması</label>
+                    <div class="col-sm-10">
+                      <i class="fa fa-percent fa-fw"></i>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
                   <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Yüklemeye Başlama Tarihi</label>
+                    <label class="col-sm-2 form-control-label">Projeye Başlama Tarihi</label>
                     <div class="col-sm-10">
                       <div class="input-group date datetime-picker">
                         <span class="input-group-addon">
@@ -346,8 +379,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Son Yükleme Tarihi</label>
+                  <div class="form-group row mb-5">
+                    <label class="col-sm-2 form-control-label">Proje Bitiş Tarihi</label>
                     <div class="col-sm-10">
                       <div class="input-group date datetime-picker">
                         <span class="input-group-addon">
@@ -357,276 +390,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Uzatma Dahil Kesin Bitiş Tarihi</label>
-                    <div class="col-sm-10">
-                      <div class="input-group date datetime-picker">
-                        <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                        </span>
-                        <input type="text" class="form-control" name="datetime">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Puanlamayı Hatırlatma Tarihi</label>
-                    <div class="col-sm-10">
-                      <div class="input-group date datetime-picker">
-                        <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                        </span>
-                        <input type="text" class="form-control" name="datetime">
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Notlandırma</h2>
-                  <div class="line"></div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">En Yüksek Puan</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Uzatma Süresinde Gönderilen Ödev İçin En Yüksek Puan</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Ödevin Ağırlığı (%)</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Notlandırma Metodu</label>
-                    <div class="col-sm-10">
-                      <select name="account" class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Geçme Notu Kullan</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom1" type="radio" value="option1" name="a" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom1">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom2" type="radio" value="option2" name="a" class="form-control-custom radio-custom">
-                        <label for="radioCustom2">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Geçme Notu</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Ödev Yükleme Çeşitleri</h2>
-                  <div class="line"></div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Yükleme Çeşitleri</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="checkboxCustom3" type="checkbox" value="" checked class="form-control-custom">
-                        <label for="checkboxCustom3">Dosya Yükleme</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="checkboxCustom4" type="checkbox" value="" class="form-control-custom">
-                        <label for="checkboxCustom4">Çevrimiçi Metin</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Kelime Sınırı</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Yüklenecek Maksimum Dosya Sayısı</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Dönüt Çeşitleri</h2>
+                  <h2 class="h5 display">Kilometre Taşı Oluşturma</h2>
                   <div class="line"></div>
                   <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Dönüt Çeşitleri</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="checkboxCustom1" type="checkbox" value="" checked class="form-control-custom">
-                        <label for="checkboxCustom1">Yorumla Dönüt</label>
-                      </div>
+                    <div class="col-sm-12">
+                      <table class="table table-responsive table-bordered criterion-table" id="my-table-2">
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td>
+                              <input type="text" name="password" class="form-control border-0" placeholder="Kilometre Taşı Başlığı">
+                            </td>
+                            <td>
+                              <input type="text" name="password" class="form-control border-0" placeholder="Kilometre Taşı Açıklaması">
+                            </td>
+                            <td>
+                              <input type="text" name="password" class="form-control border-0" placeholder="Son Teslim Tarihi">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                        <label for="checkboxCustom2">Dönüt Dosyası</label>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Ödev Yükleme Ayarları</h2>
-                  <div class="line"></div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Öğrencilerin Gönder Düğmesine Tıklamasını Zorunlu Kıl</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom3" type="radio" value="option3" name="b" class="form-control-custom radio-custom">
-                        <label for="radioCustom3">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom4" type="radio" value="option4" name="b" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom4">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Öğrencilerin Gönderme Bildirimini Kabul Etmelerini Zorunlu Kıl</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom5" type="radio" value="option1" name="c" class="form-control-custom radio-custom">
-                        <label for="radioCustom5">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom6" type="radio" value="option2" name="c" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom6">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Taslağı Görmeye İzin Ver</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom7" type="radio" value="option1" name="d" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom7">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom8" type="radio" value="option2" name="d" class="form-control-custom radio-custom">
-                        <label for="radioCustom8">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Taslak Halinde Yeniden yüklemeye İzin Ver</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom9" type="radio" value="option1" name="e" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom9">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom10" type="radio" value="option2" name="e" class="form-control-custom radio-custom">
-                        <label for="radioCustom10">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Maksimum Taslak Düzenleme</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Etiket Ekle</label>
-                    <div class="col-sm-10">
-                      <div class="form-group multiple-form-group input-group">
-                        <input type="text" name="tags['value'][]" class="form-control">
-                        <span class="input-group-btn">
-                          <button type="button" class="btn btn-info btn-add">
-                            <i class="fa fa-plus fa-fw"></i>
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Bildirimler</h2>
-                  <div class="line"></div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 form-control-label">Öğretmenleri Yüklemeler Hakkında Uyar</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom11" type="radio" value="option1" name="f" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom11">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom12" type="radio" value="option2" name="f" class="form-control-custom radio-custom">
-                        <label for="radioCustom12">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Öğretmenleri Son Yükleme Tarihleri İle İlgili Uyar</label>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom13" type="radio" value="option1" name="g" class="form-control-custom radio-custom" checked>
-                        <label for="radioCustom13">Evet</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="i-checks">
-                        <input id="radioCustom14" type="radio" value="option2" name="g" class="form-control-custom radio-custom">
-                        <label for="radioCustom14">Hayır</label>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="h5 display">Ödev Atama</h2>
-                  <div class="line"></div>
-                  <div class="form-group row mb-5">
-                    <label class="col-sm-2 form-control-label">Öğrenciler</label>
-                    <div class="col-sm-10">
-                      <div class="row">
-                        <div class="col-sm-5">
-                          <select name="from[]" id="multiselect" class="form-control multiple-select" size="8" multiple="multiple">
-                            <option value="1">Ahmet YILDIZ</option>
-                            <option value="2">Ahmet YILDIZ</option>
-                            <option value="3">Ahmet YILDIZ</option>
-                            <option value="4">Ahmet YILDIZ</option>
-                            <option value="5">Ahmet YILDIZ</option>
-                            <option value="6">Ahmet YILDIZ</option>
-                            <option value="7">Ahmet YILDIZ</option>
-                            <option value="8">Ahmet YILDIZ</option>
-                            <option value="9">Ahmet YILDIZ</option>
-                          </select>
-                        </div>
-                        <div class="col-sm-2">
-                          <button type="button" id="multiselect_rightAll" class="btn btn-block">
-                            <i class="fa fa-forward"></i>
-                          </button>
-                          <button type="button" id="multiselect_rightSelected" class="btn btn-block">
-                            <i class="fa fa-chevron-right"></i>
-                          </button>
-                          <button type="button" id="multiselect_leftSelected" class="btn btn-block">
-                            <i class="fa fa-chevron-left"></i>
-                          </button>
-                          <button type="button" id="multiselect_leftAll" class="btn btn-block">
-                            <i class="fa fa-backward"></i>
-                          </button>
-                        </div>
-                        <div class="col-sm-5">
-                          <select name="to[]" id="multiselect_to" class="form-control" size="8" multiple="multiple"></select>
-                        </div>
-                      </div>
+                    <div class="col-sm-12">
+                      <button type="button" class="btn btn-outline-info btn-sm" onclick="appendRow2()">
+                        <i class="fa fa-plus"></i> Kilometre Taşı Ekle
+                      </button>
                     </div>
                   </div>
                   <div class="form-group row">
@@ -658,132 +446,8 @@
     </footer>
   </div>
 
-
-  <!-- Rubric Modal-->
-  <div id="rubricModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
-    <div role="document" class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 id="exampleModalLabel" class="modal-title">Rubric Modal</h5>
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form class="form-horizontal forms">
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Adı</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row mb-5">
-              <label class="col-sm-2 form-control-label">Açıklama</label>
-              <div class="col-sm-10">
-                <textarea name="my-editor-2"></textarea>
-              </div>
-            </div>
-            <div class="form-group row mb-5">
-              <div class="col-sm-12">
-                <div class="h3 float-left">Kriterler</div>
-                <div class="btn-group float-right" role="group">
-                  <button type="button" class="btn btn-info btn-sm" onclick="appendColumn()">
-                    <i class="fa fa-plus"></i> Ekle
-                  </button>
-                  <button type="button" class="btn btn-danger btn-sm" onclick="deleteColumn()">
-                    <i class="fa fa-minus"></i> Sil
-                  </button>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <table class="table  table-responsive table-bordered criterion-table" id="my-table">
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                      <td>
-                        <input type="text" name="password" class="form-control border-0" placeholder="Seviye">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-sm-12">
-                <button type="button" class="btn btn-info btn-sm" onclick="appendRow()">
-                  <i class="fa fa-plus"></i> Kriter Ekle
-                </button>
-              </div>
-            </div>
-            <h2 class="h5 display">Rubric Ayarları</h2>
-            <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-4 form-control-label">Öğrenci notlandırılmadan önce rubriği görebilsin</label>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom15" type="radio" value="option1" name="h" class="form-control-custom radio-custom" checked>
-                  <label for="radioCustom15">Evet</label>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom16" type="radio" value="option2" name="h" class="form-control-custom radio-custom">
-                  <label for="radioCustom16">Hayır</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-4 form-control-label">Öğrenci notlandırmadan sonra rubriği görebilsin</label>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom17" type="radio" value="option1" name="i" class="form-control-custom radio-custom" checked>
-                  <label for="radioCustom17">Evet</label>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom18" type="radio" value="option2" name="i" class="form-control-custom radio-custom">
-                  <label for="radioCustom18">Hayır</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-4 form-control-label">Öğretmen her bir kriter için yorum yapabilsin</label>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom19" type="radio" value="option1" name="j" class="form-control-custom radio-custom" checked>
-                  <label for="radioCustom19">Evet</label>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="i-checks">
-                  <input id="radioCustom20" type="radio" value="option2" name="j" class="form-control-custom radio-custom">
-                  <label for="radioCustom20">Hayır</label>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="form-group row">
-              <div class="col-sm-10 offset-sm-2 text-right">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">İptal</button>
-                <button type="submit" class="btn btn-info">Kaydet</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Marking Guide Modal-->
-  <div id="markingGuideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
+  <!-- Project Group Modal-->
+  <div id="projectGroupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade bd-example-modal-lg text-left">
     <div role="document" class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -878,58 +542,7 @@
 
 
   <script>
-    // rubric dynamic table
-    function appendColumn() {
-      var tbl = document.getElementById('my-table'), i;
-      for (i = 0; i < tbl.rows.length; i++) {
-        createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), 'form-control border-0', 'Seviye');
-      }
-    }
-    function appendRow() {
-      var tbl = document.getElementById('my-table'),
-        row = tbl.insertRow(tbl.rows.length), i;
-      for (i = 0; i < tbl.rows[0].cells.length; i++) {
-        if (i === 0) {
-          createBtnCell(row.insertCell(i), 'btn btn-danger btn-sm');
-        } else if (i === 1) {
-          createCell(row.insertCell(i), 'form-control border-0', '');
-        } else {
-          createCell(row.insertCell(i), 'form-control border-0', 'Seviye');
-
-        }
-      }
-    }
-    function createCell(cell, style, attr) {
-      var input = document.createElement('input');
-      input.setAttribute('class', style);
-      input.setAttribute('placeholder', attr);
-      cell.appendChild(input);
-    }
-    function createBtnCell(cell, style) {
-      var btn = document.createElement('button');
-      btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
-      btn.setAttribute('class', style);
-      btn.setAttribute('type', 'button');
-      btn.setAttribute('onclick', 'deleteRow(this)');
-      cell.appendChild(btn);
-    }
-    function deleteRow(row) {
-      var tbl = document.getElementById('my-table');
-      var tblRow = row.parentElement.parentElement;
-      tbl.deleteRow(tblRow.rowIndex);
-    }
-    function deleteColumn() {
-      var allRows = document.getElementById('my-table').rows;
-      for (var i = 0; i < allRows.length; i++) {
-        if (allRows[i].cells.length > 1) {
-          allRows[i].deleteCell(-1);
-        }
-      }
-    }
-  </script>
-
-  <script>
-    // marking guide dynamic table
+    // milestones create dynamic table
     function appendRow2() {
       var tbl = document.getElementById('my-table-2'),
         row = tbl.insertRow(tbl.rows.length), i;
@@ -937,13 +550,11 @@
         if (i === 0) {
           createBtnCell2(row.insertCell(i), 'btn btn-danger btn-sm');
         } else if (i === 1) {
-          createCell2(row.insertCell(i), 'form-control border-0', '');
+          createCell2(row.insertCell(i), 'form-control border-0', 'Kilometre Taşı Başlığı');
         } else if (i === 2) {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Kriter Açıklaması');
-        } else if (i === 3) {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Öğrenciye Yapılacak Açıklama');
+          createCell2(row.insertCell(i), 'form-control border-0', 'Kilometre Taşı Açıklaması');
         } else {
-          createCell2(row.insertCell(i), 'form-control border-0', 'Maksimum Skor');
+          createCell2(row.insertCell(i), 'form-control border-0', 'Son Teslim Tarihi');
         }
       }
     }
@@ -953,6 +564,22 @@
       input.setAttribute('placeholder', attr);
       cell.appendChild(input);
     }
+
+    // function createDateCell2(cell, style, attr) {
+    //   var inputGrp = document.createElement('div');
+    //   inputGrp.setAttribute('class', style);
+    //   cell.appendChild(inputGrp);
+    //   var span = document.createElement('span');
+    //   input.setAttribute('placeholder', attr);
+    // }
+
+    // <div class="input-group date datetime-picker">
+    //   <span class="input-group-addon">
+    //     <span class="fa fa-calendar"></span>
+    //   </span>
+    //   <input type="text" class="form-control" name="datetime">
+    // </div>
+
     function createBtnCell2(cell, style) {
       var btn = document.createElement('button');
       btn.innerHTML = '<i class="fa fa-minus fa-fw"></i>';
@@ -968,61 +595,11 @@
     }
   </script>
 
-
   <script>
     CKEDITOR.replace('my-editor');
     CKEDITOR.replace('my-editor-2');
     CKEDITOR.replace('my-editor-3');
-
     $('.multiple-select').multiselect();
-
-    // homework add tag
-    (function ($) {
-
-      var addFormGroup = function (event) {
-        event.preventDefault();
-
-        var $formGroup = $(this).closest('.form-group');
-        var $multipleFormGroup = $formGroup.closest('.multiple-form-group');
-        var $formGroupClone = $formGroup.clone();
-
-        $(this)
-          .toggleClass('btn-success btn-add btn-danger btn-remove')
-          .html('<i class="fa fa-minus fa-fw"></i>');
-
-        $formGroupClone.find('input').val('');
-        $formGroupClone.insertAfter($formGroup);
-
-        var $lastFormGroupLast = $multipleFormGroup.find('.form-group:last');
-        if ($multipleFormGroup.data('max') <= countFormGroup($multipleFormGroup)) {
-          $lastFormGroupLast.find('.btn-add').attr('disabled', true);
-        }
-      };
-
-      var removeFormGroup = function (event) {
-        event.preventDefault();
-
-        var $formGroup = $(this).closest('.form-group');
-        var $multipleFormGroup = $formGroup.closest('.multiple-form-group');
-
-        var $lastFormGroupLast = $multipleFormGroup.find('.form-group:last');
-        if ($multipleFormGroup.data('max') >= countFormGroup($multipleFormGroup)) {
-          $lastFormGroupLast.find('.btn-add').attr('disabled', false);
-        }
-
-        $formGroup.remove();
-      };
-
-      var countFormGroup = function ($form) {
-        return $form.find('.form-group').length;
-      };
-
-      $(document).on('click', '.btn-add', addFormGroup);
-      $(document).on('click', '.btn-remove', removeFormGroup);
-
-    })(jQuery);
-
-
   </script>
 </body>
 

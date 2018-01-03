@@ -428,5 +428,18 @@ header h1 button {
 }
 /* homework */
 /* project */
-
+.percent{
+	position: relative;
+}
+.percent i{
+	color: #999;
+	opacity: .7;
+	font-size: .8rem;
+	position: absolute;
+	left: 1.1rem;
+	padding: 13px 10px;
+}
+.percent input{
+	padding-left: 30px;
+}
 /* project */
