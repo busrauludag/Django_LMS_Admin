@@ -339,7 +339,8 @@ header h1 button {
 		max-width: 1000px;
 	}
 }
-#homeworkAccordion .card-header {
+#homeworkAccordion .card-header,
+.homework-accordion .card-header {
 	background-color: #eceff1;
 	border-bottom-color: #cfd6db;
 	height: auto;
