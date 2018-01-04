@@ -362,8 +362,7 @@
                     <div class="col-sm-10 offset-sm-2">
                       <div class="row">
                         <div class="col-sm-5">
-                          <label class="form-control-label">
-                            <strong>Grup Adı:</strong> Group Name</label>
+                          <input type="text" class="form-control form-control-sm mb-1" placeholder="Grup Adı">
                           <select name="from[]" id="multiselect" class="form-control multiple-select" size="8" multiple="multiple">
                             <option value="1">Ahmet YILDIZ</option>
                             <option value="2">Ahmet YILDIZ</option>
@@ -394,10 +393,193 @@
                           <label class="form-control-label">Seçilen Öğrenciler</label>
                           <select name="to[]" id="multiselect_to" class="form-control" size="8" multiple="multiple"></select>
                         </div>
+                        <div class="col-sm-12">
+                          <button class="btn btn-outline-info btn-sm">
+                            <i class="fa fa-check fa-fw"></i> Öğrencileri Gruba Ata
+                          </button>
+                        </div>
+                      </div>
+                      <div id="homeworkAccordion" role="tablist" class="homework-accordion mt-3">
+                        <div class="card">
+                          <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                              <a class="collapsed text-info" data-toggle="collapse" href="#homeworkOne" aria-expanded="true" aria-controls="collapseOne">
+                                Grup Name
+                              </a>
+                              <small class="text-secondary float-right">
+                                <span class="mr-1">
+                                  <i class="fa fa-user fa-fw"></i> 30</span>
+                              </small>
+                            </h5>
+                          </div>
+                          <div id="homeworkOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#homeworkAccordion">
+                            <div class="card-body">
+                              <button class="btn btn-outline-info btn-sm float-right">
+                                <i class="fa fa-pencil fa-fw"></i> Düzenle
+                              </button>
+                              <table class="table table-responsive borderless">
+                                <thead>
+                                  <tr>
+                                    <th class="border-0 p-1" scope="col" width="5%"></th>
+                                    <th class="border-0 p-1" scope="col">Adı Soyadı</th>
+                                    <th class="border-0 p-1" scope="col">E-Posta</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" role="tab" id="headingTwo">
+                            <h5 class="mb-0">
+                              <a class="collapsed text-info" data-toggle="collapse" href="#homeworkTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Group Name
+                              </a>
+                              <small class="text-secondary float-right">
+                                <span class="mr-1">
+                                  <i class="fa fa-user fa-fw"></i> 30</span>
+                              </small>
+                            </h5>
+                          </div>
+                          <div id="homeworkTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#homeworkAccordion">
+                            <div class="card-body">
+                              <button class="btn btn-outline-info btn-sm float-right">
+                                <i class="fa fa-pencil fa-fw"></i> Düzenle
+                              </button>
+                              <table class="table table-responsive borderless">
+                                <thead>
+                                  <tr>
+                                    <th class="border-0 p-1" scope="col" width="5%"></th>
+                                    <th class="border-0 p-1" scope="col">Adı Soyadı</th>
+                                    <th class="border-0 p-1" scope="col">E-Posta</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" role="tab" id="headingThree">
+                            <h5 class="mb-0">
+                              <a class="collapsed text-info" data-toggle="collapse" href="#homeworkThree" aria-expanded="false" aria-controls="collapseThree">
+                                Group Name
+                              </a>
+                              <small class="text-secondary float-right">
+                                <span class="mr-1">
+                                  <i class="fa fa-user fa-fw"></i> 30</span>
+                              </small>
+                            </h5>
+                          </div>
+                          <div id="homeworkThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#homeworkAccordion">
+                            <div class="card-body">
+                              <button class="btn btn-outline-info btn-sm float-right">
+                                <i class="fa fa-pencil fa-fw"></i> Düzenle
+                              </button>
+                              <table class="table table-responsive borderless">
+                                <thead>
+                                  <tr>
+                                    <th class="border-0 p-1" scope="col" width="5%"></th>
+                                    <th class="border-0 p-1" scope="col">Adı Soyadı</th>
+                                    <th class="border-0 p-1" scope="col">E-Posta</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="p-1" scope="row">
+                                      <img src="img/avatar-2.png" alt="" class="rounded-circle">
+                                    </th>
+                                    <td class="p-1">Ahmet YILDIZ</td>
+                                    <td class="p-1">ahmet@mimcrea.com</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
                   <div class="form-group row">
                     <div class="col-sm-10 offset-sm-2 text-right">
                       <button type="submit" class="btn btn-danger">İptal</button>
@@ -457,7 +639,7 @@
       if ($(this).val() == 'manuel') {
         $('#selectManuelField').show();
       }
-      else{
+      else {
         $('#selectManuelField').hide();
       }
     });

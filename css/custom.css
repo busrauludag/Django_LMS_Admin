@@ -442,4 +442,7 @@ header h1 button {
 .percent input{
 	padding-left: 30px;
 }
+.borderless td, .borderless th {
+	border: none;
+}
 /* project */
