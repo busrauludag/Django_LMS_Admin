@@ -1243,7 +1243,7 @@ form.forms div[class*="col-"] {
 
 section.forms header,
 section header .display {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 section.forms .form {
@@ -1376,6 +1376,7 @@ form.forms small, form.forms span {
 section.forms label span, section.forms label small,
 form.forms label span, form.forms label small {
   font-size: 0.8em;
+  color: #000;
 }
 
 section.forms .input-group-addon,
